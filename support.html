@@ -582,6 +582,7 @@
         <a href="#start" data-i18n="tocStart">Bien démarrer</a>
         <a href="#permissions" data-i18n="tocPermissions">Permissions</a>
         <a href="#documents" data-i18n="tocDocuments">Documents</a>
+        <a href="#storage" data-i18n="tocStorage">Stockage</a>
         <a href="#tools" data-i18n="tocTools">Outils PDF</a>
         <a href="#privacy" data-i18n="tocPrivacy">Confidentialité</a>
         <a href="#troubleshooting" data-i18n="tocTroubleshooting">Problèmes fréquents</a>
@@ -670,8 +671,28 @@
           </ul>
         </section>
 
+        <section id="storage" class="support-section">
+          <h2 data-i18n="sStorageTitle">4. Stockage et fichiers temporaires</h2>
+          <p data-i18n="sStorageP1">
+            L’écran Stockage de Scaneris permet de comprendre l’espace utilisé par vos documents, pages, favoris, signature enregistrée et fichiers temporaires.
+          </p>
+          <ul>
+            <li data-i18n="sStorageLi1">Documents et pages : correspondent aux éléments enregistrés dans l’application.</li>
+            <li data-i18n="sStorageLi2">Signature enregistrée : correspond à la trace de signature sauvegardée, pas au nombre de PDF signés.</li>
+            <li data-i18n="sStorageLi3">Fichiers temporaires : correspondent aux PDF générés pour l’export, le partage ou certains outils PDF.</li>
+            <li data-i18n="sStorageLi4">Les PDF signés, compressés, fusionnés, divisés, protégés ou filigranés peuvent apparaître dans les fichiers temporaires.</li>
+            <li data-i18n="sStorageLi5">Le bouton “Nettoyer les fichiers temporaires” supprime uniquement les fichiers temporaires Scaneris, sans supprimer vos documents enregistrés.</li>
+          </ul>
+          <div class="note">
+            <strong data-i18n="sStorageNoteTitle">Zone sensible</strong>
+            <p data-i18n="sStorageNoteText">
+              L’action “Supprimer toutes les données locales” est définitive. Elle doit être utilisée avec prudence, car elle peut supprimer les documents, dossiers, favoris, réglages et signature enregistrés dans l’application.
+            </p>
+          </div>
+        </section>
+
         <section id="tools" class="support-section">
-          <h2 data-i18n="s4Title">4. Aide sur les outils PDF</h2>
+          <h2 data-i18n="s4Title">5. Aide sur les outils PDF</h2>
 
           <h3 data-i18n="s4H1">OCR / extraction de texte</h3>
           <p data-i18n="s4P1">
@@ -700,7 +721,7 @@
         </section>
 
         <section id="privacy" class="support-section">
-          <h2 data-i18n="s5Title">5. Confidentialité et stockage local</h2>
+          <h2 data-i18n="s5Title">6. Confidentialité et stockage local</h2>
           <p data-i18n="s5P1">
             Scaneris est conçu avec une approche local-first. L’application ne nécessite pas de compte utilisateur et ne propose pas de synchronisation cloud automatique dans la version actuelle.
           </p>
@@ -713,7 +734,7 @@
         </section>
 
         <section id="troubleshooting" class="support-section">
-          <h2 data-i18n="s6Title">6. Problèmes fréquents</h2>
+          <h2 data-i18n="s6Title">7. Problèmes fréquents</h2>
 
           <h3 data-i18n="s6H1">La caméra ne s’ouvre pas</h3>
           <p data-i18n="s6P1">
@@ -742,7 +763,7 @@
         </section>
 
         <section id="bug" class="support-section">
-          <h2 data-i18n="s7Title">7. Signaler un problème</h2>
+          <h2 data-i18n="s7Title">8. Signaler un problème</h2>
           <p data-i18n="s7P1">
             Pour aider le support à comprendre le problème, indiquez si possible :
           </p>
@@ -785,6 +806,7 @@
         tocStart: "Bien démarrer",
         tocPermissions: "Permissions",
         tocDocuments: "Documents",
+        tocStorage: "Stockage",
         tocTools: "Outils PDF",
         tocPrivacy: "Confidentialité",
         tocTroubleshooting: "Problèmes fréquents",
@@ -820,7 +842,17 @@
         s3Li3: "Lorsque vous partagez un fichier vers une autre app, cette app devient responsable de son traitement.",
         s3Li4: "Certains fichiers temporaires peuvent rester sur l’appareil selon le fonctionnement du système.",
 
-        s4Title: "4. Aide sur les outils PDF",
+        sStorageTitle: "4. Stockage et fichiers temporaires",
+        sStorageP1: "L’écran Stockage de Scaneris permet de comprendre l’espace utilisé par vos documents, pages, favoris, signature enregistrée et fichiers temporaires.",
+        sStorageLi1: "Documents et pages : correspondent aux éléments enregistrés dans l’application.",
+        sStorageLi2: "Signature enregistrée : correspond à la trace de signature sauvegardée, pas au nombre de PDF signés.",
+        sStorageLi3: "Fichiers temporaires : correspondent aux PDF générés pour l’export, le partage ou certains outils PDF.",
+        sStorageLi4: "Les PDF signés, compressés, fusionnés, divisés, protégés ou filigranés peuvent apparaître dans les fichiers temporaires.",
+        sStorageLi5: "Le bouton “Nettoyer les fichiers temporaires” supprime uniquement les fichiers temporaires Scaneris, sans supprimer vos documents enregistrés.",
+        sStorageNoteTitle: "Zone sensible",
+        sStorageNoteText: "L’action “Supprimer toutes les données locales” est définitive. Elle doit être utilisée avec prudence, car elle peut supprimer les documents, dossiers, favoris, réglages et signature enregistrés dans l’application.",
+
+        s4Title: "5. Aide sur les outils PDF",
         s4H1: "OCR / extraction de texte",
         s4P1: "L’OCR peut extraire du texte depuis un scan ou un document, mais le résultat peut contenir des erreurs. Vérifiez toujours le texte avant de l’utiliser.",
         s4H2: "Carte d’identité et passeport",
@@ -832,12 +864,12 @@
         s4H5: "QR codes",
         s4P5: "Avant d’ouvrir un lien provenant d’un QR code, vérifiez toujours sa destination. Les sites externes ne sont pas contrôlés par Scaneris.",
 
-        s5Title: "5. Confidentialité et stockage local",
+        s5Title: "6. Confidentialité et stockage local",
         s5P1: "Scaneris est conçu avec une approche local-first. L’application ne nécessite pas de compte utilisateur et ne propose pas de synchronisation cloud automatique dans la version actuelle.",
         s5P2: "Les fichiers quittent Scaneris uniquement lorsque vous utilisez volontairement une action de partage, d’export ou d’ouverture vers une autre application.",
         s5Link: "Lire la politique de confidentialité →",
 
-        s6Title: "6. Problèmes fréquents",
+        s6Title: "7. Problèmes fréquents",
         s6H1: "La caméra ne s’ouvre pas",
         s6P1: "Vérifiez que la permission caméra est autorisée dans les réglages de votre appareil. Redémarrer l’application peut aussi aider.",
         s6H2: "L’import ne fonctionne pas",
@@ -849,7 +881,7 @@
         s6H5: "Le partage ne propose pas l’app souhaitée",
         s6P5: "Les options de partage dépendent des applications installées sur votre appareil et du système Android ou iOS.",
 
-        s7Title: "7. Signaler un problème",
+        s7Title: "8. Signaler un problème",
         s7P1: "Pour aider le support à comprendre le problème, indiquez si possible :",
         s7Li1: "le modèle de votre appareil ;",
         s7Li2: "la version Android ou iOS ;",
@@ -877,6 +909,7 @@
         tocStart: "Getting started",
         tocPermissions: "Permissions",
         tocDocuments: "Documents",
+        tocStorage: "Storage",
         tocTools: "PDF tools",
         tocPrivacy: "Privacy",
         tocTroubleshooting: "Common issues",
@@ -912,7 +945,17 @@
         s3Li3: "When you share a file to another app, that app becomes responsible for its processing.",
         s3Li4: "Some temporary files may remain on the device depending on system behavior.",
 
-        s4Title: "4. Help with PDF tools",
+        sStorageTitle: "4. Storage and temporary files",
+        sStorageP1: "The Scaneris Storage screen helps you understand the space used by your documents, pages, favorites, saved signature and temporary files.",
+        sStorageLi1: "Documents and pages: items saved inside the app.",
+        sStorageLi2: "Saved signature: the saved signature trace, not the number of signed PDFs.",
+        sStorageLi3: "Temporary files: PDFs generated for export, sharing or some PDF tools.",
+        sStorageLi4: "Signed, compressed, merged, split, protected or watermarked PDFs may appear in temporary files.",
+        sStorageLi5: "The “Clean temporary files” button removes only Scaneris temporary files, without deleting your saved documents.",
+        sStorageNoteTitle: "Sensitive area",
+        sStorageNoteText: "The “Delete all local data” action is permanent. It should be used carefully, as it may delete documents, folders, favorites, settings and the saved signature stored in the app.",
+
+        s4Title: "5. Help with PDF tools",
         s4H1: "OCR / text extraction",
         s4P1: "OCR can extract text from a scan or document, but the result may contain errors. Always review the text before using it.",
         s4H2: "ID card and passport",
@@ -924,12 +967,12 @@
         s4H5: "QR codes",
         s4P5: "Before opening a link from a QR code, always check its destination. External websites are not controlled by Scaneris.",
 
-        s5Title: "5. Privacy and local storage",
+        s5Title: "6. Privacy and local storage",
         s5P1: "Scaneris is designed with a local-first approach. The app does not require a user account and does not provide automatic cloud synchronization in the current version.",
         s5P2: "Files leave Scaneris only when you deliberately use a sharing, export or opening action to another app.",
         s5Link: "Read the Privacy Policy →",
 
-        s6Title: "6. Common issues",
+        s6Title: "7. Common issues",
         s6H1: "The camera does not open",
         s6P1: "Check that camera permission is allowed in your device settings. Restarting the app may also help.",
         s6H2: "Import does not work",
@@ -941,7 +984,7 @@
         s6H5: "The share sheet does not show the app I want",
         s6P5: "Sharing options depend on the apps installed on your device and on Android or iOS.",
 
-        s7Title: "7. Report an issue",
+        s7Title: "8. Report an issue",
         s7P1: "To help support understand the issue, please include if possible:",
         s7Li1: "your device model;",
         s7Li2: "your Android or iOS version;",
