@@ -1,1 +1,993 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scaneris — Support / Aide</title>
+  <meta
+    name="description"
+    content="Scaneris Support — Aide, contact, questions fréquentes et assistance."
+  />
 
+  <style>
+    :root {
+      --bg-0: #f5f8ff;
+      --text: #101828;
+      --text-soft: #475467;
+      --muted: #667085;
+      --line: rgba(16, 24, 40, 0.10);
+      --blue: #3478ff;
+      --blue-dark: #1d63f0;
+      --blue-soft: #e8f0ff;
+      --green-soft: #eafaf1;
+      --purple-soft: #f1ecff;
+      --orange-soft: #fff2e6;
+      --shadow: 0 24px 70px rgba(28, 55, 100, 0.14);
+      --shadow-soft: 0 14px 36px rgba(28, 55, 100, 0.10);
+      --radius-xl: 34px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(52, 120, 255, 0.20), transparent 34%),
+        radial-gradient(circle at top right, rgba(82, 214, 255, 0.16), transparent 32%),
+        linear-gradient(180deg, var(--bg-0), #ffffff 42%, #f8fbff 100%);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .page {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 850;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 15px;
+      background:
+        linear-gradient(145deg, #ffffff 0%, #eaf1ff 35%, #3478ff 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.85),
+        0 12px 28px rgba(52, 120, 255, 0.24);
+      position: relative;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 23px;
+      left: 11px;
+      top: 8px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+    }
+
+    .brand span { font-size: 18px; }
+
+    .top-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      color: var(--text-soft);
+      font-size: 14px;
+      font-weight: 850;
+      box-shadow: 0 10px 28px rgba(28, 55, 100, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .language-switch {
+      display: inline-flex;
+      padding: 5px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 28px rgba(28, 55, 100, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .language-switch button {
+      border: 0;
+      cursor: pointer;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 850;
+      transition: all 180ms ease;
+    }
+
+    .language-switch button.active {
+      color: #ffffff;
+      background: var(--blue);
+      box-shadow: 0 8px 18px rgba(52, 120, 255, 0.28);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.96) 0%, rgba(238,246,255,0.94) 48%, rgba(231,240,255,0.90) 100%);
+      box-shadow: var(--shadow);
+      padding: 46px;
+      margin-bottom: 22px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      right: -130px;
+      top: -140px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(52,120,255,0.25), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      right: 80px;
+      bottom: -96px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(82,214,255,0.22), transparent 66%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: rgba(52, 120, 255, 0.10);
+      color: var(--blue-dark);
+      font-size: 14px;
+      font-weight: 850;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 0 6px rgba(52,120,255,0.12);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+    }
+
+    .hero-subtitle {
+      margin: 18px 0 0;
+      max-width: 780px;
+      font-size: 18px;
+      color: var(--text-soft);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid var(--line);
+      color: var(--text-soft);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .pill-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 7px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow-soft);
+      padding: 18px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .toc-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 900;
+      margin: 0 0 12px;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--text-soft);
+      font-weight: 750;
+      font-size: 14px;
+      padding: 9px 10px;
+      border-radius: 14px;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .support-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow-soft);
+      padding: 34px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .support-section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .support-section:first-child { padding-top: 0; }
+    .support-section:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      line-height: 1.16;
+      letter-spacing: -0.045em;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      margin: 0 0 13px;
+      color: var(--text-soft);
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 28px;
+      margin: 9px 0;
+      color: var(--text-soft);
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 0 5px rgba(52,120,255,0.10);
+    }
+
+    .note {
+      border-radius: 22px;
+      border: 1px solid rgba(52, 120, 255, 0.18);
+      background:
+        linear-gradient(135deg, rgba(232, 240, 255, 0.92), rgba(255, 255, 255, 0.80));
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .quick-card {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.76);
+      border-radius: 20px;
+      padding: 16px;
+    }
+
+    .quick-card strong {
+      display: block;
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .quick-card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .contact-card {
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at top left, rgba(52,120,255,0.22), transparent 32%),
+        linear-gradient(135deg, #101828, #172554);
+      color: #ffffff;
+      padding: 26px;
+      margin-top: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-card p { color: rgba(255,255,255,0.78); }
+
+    .contact-card a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    strong { color: var(--text); }
+
+    @media (max-width: 920px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: relative; top: 0; }
+      .support-card { padding: 28px; }
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 18px 14px 46px; }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .top-actions {
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .back-link {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .language-switch {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .language-switch button { width: 100%; }
+
+      .hero {
+        padding: 30px 22px;
+        border-radius: 28px;
+      }
+
+      .hero-subtitle { font-size: 16px; }
+
+      .support-card {
+        padding: 22px;
+        border-radius: 28px;
+      }
+
+      .toc { border-radius: 24px; }
+
+      .quick-grid { grid-template-columns: 1fr; }
+
+      h2 { font-size: 22px; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero,
+      .toc,
+      .support-card {
+        animation: rise 520ms ease both;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Scaneris Legal Center">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Scaneris</span>
+      </a>
+
+      <div class="top-actions">
+        <a class="back-link" href="index.html" data-i18n="backHome">← Centre légal</a>
+
+        <div class="language-switch" aria-label="Language selector">
+          <button id="btn-fr" class="active" type="button" onclick="showLanguage('fr')">
+            Français
+          </button>
+          <button id="btn-en" type="button" onclick="showLanguage('en')">
+            English
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span data-i18n="eyebrow">Support Scaneris</span>
+        </div>
+
+        <h1 data-i18n="heroTitle">Aide et support</h1>
+
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Retrouvez les informations utiles pour utiliser Scaneris, résoudre les problèmes courants et contacter le support.
+        </p>
+
+        <div class="hero-meta">
+          <span class="pill">
+            <span class="pill-icon">✓</span>
+            <span data-i18n="pillEmail">Support par email</span>
+          </span>
+          <span class="pill">
+            <span class="pill-icon">✓</span>
+            <span data-i18n="pillLocal">Application local-first</span>
+          </span>
+          <span class="pill">
+            <span class="pill-icon">✓</span>
+            <span data-i18n="pillUpdated">Mise à jour : 1 mai 2026</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title" data-i18n="tocTitle">Sommaire</p>
+        <a href="#contact" data-i18n="tocContact">Contact</a>
+        <a href="#start" data-i18n="tocStart">Bien démarrer</a>
+        <a href="#permissions" data-i18n="tocPermissions">Permissions</a>
+        <a href="#documents" data-i18n="tocDocuments">Documents</a>
+        <a href="#tools" data-i18n="tocTools">Outils PDF</a>
+        <a href="#privacy" data-i18n="tocPrivacy">Confidentialité</a>
+        <a href="#troubleshooting" data-i18n="tocTroubleshooting">Problèmes fréquents</a>
+        <a href="#bug" data-i18n="tocBug">Signaler un bug</a>
+      </nav>
+
+      <article class="support-card">
+        <section id="contact" class="support-section">
+          <div class="contact-card">
+            <h2 data-i18n="contactTitle">Contacter le support</h2>
+            <p data-i18n="contactText">
+              Pour toute question, problème technique ou demande liée à Scaneris, vous pouvez contacter le support par email.
+            </p>
+            <p>
+              <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
+            </p>
+          </div>
+        </section>
+
+        <section id="start" class="support-section">
+          <h2 data-i18n="s1Title">1. Bien démarrer avec Scaneris</h2>
+          <p data-i18n="s1P1">
+            Scaneris permet de scanner, organiser, transformer et partager des documents directement depuis votre appareil.
+          </p>
+
+          <div class="quick-grid">
+            <div class="quick-card">
+              <strong data-i18n="s1Card1Title">Scanner un document</strong>
+              <p data-i18n="s1Card1Text">
+                Utilisez le bouton de scan pour capturer un document, ajuster les pages et créer un document local.
+              </p>
+            </div>
+
+            <div class="quick-card">
+              <strong data-i18n="s1Card2Title">Importer</strong>
+              <p data-i18n="s1Card2Text">
+                Importez une image ou un fichier compatible depuis votre appareil lorsque la fonction est disponible.
+              </p>
+            </div>
+
+            <div class="quick-card">
+              <strong data-i18n="s1Card3Title">Documents</strong>
+              <p data-i18n="s1Card3Text">
+                Retrouvez vos documents locaux, recherchez-les, ajoutez-les aux favoris et exportez-les en PDF.
+              </p>
+            </div>
+
+            <div class="quick-card">
+              <strong data-i18n="s1Card4Title">Outils PDF</strong>
+              <p data-i18n="s1Card4Text">
+                Utilisez les outils pour fusionner, compresser, diviser, protéger, filigraner ou transformer des documents.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="permissions" class="support-section">
+          <h2 data-i18n="s2Title">2. Permissions nécessaires</h2>
+          <p data-i18n="s2P1">
+            Certaines fonctions nécessitent des permissions système. Ces permissions ne sont demandées que lorsqu’elles sont utiles au fonctionnement de l’application.
+          </p>
+          <ul>
+            <li data-i18n="s2Li1">Caméra : nécessaire pour scanner des documents, cartes, passeports ou QR codes.</li>
+            <li data-i18n="s2Li2">Photos / images : nécessaire pour importer une image depuis l’appareil.</li>
+            <li data-i18n="s2Li3">Fichiers : nécessaire pour importer ou exporter des PDF et utiliser les options système.</li>
+            <li data-i18n="s2Li4">Stockage local : nécessaire pour conserver les documents et préférences dans l’espace de l’application.</li>
+          </ul>
+          <div class="note">
+            <strong data-i18n="s2NoteTitle">Permission refusée ?</strong>
+            <p data-i18n="s2NoteText">
+              Si une permission est refusée, certaines fonctions peuvent ne plus fonctionner. Vous pouvez généralement la réactiver depuis les réglages de votre appareil.
+            </p>
+          </div>
+        </section>
+
+        <section id="documents" class="support-section">
+          <h2 data-i18n="s3Title">3. Documents et exports</h2>
+          <p data-i18n="s3P1">
+            Les documents créés ou importés dans Scaneris sont principalement stockés localement sur votre appareil.
+          </p>
+          <ul>
+            <li data-i18n="s3Li1">Vous pouvez organiser vos documents, les rechercher et les ajouter aux favoris.</li>
+            <li data-i18n="s3Li2">Vous pouvez exporter ou partager un PDF via les options système de votre appareil.</li>
+            <li data-i18n="s3Li3">Lorsque vous partagez un fichier vers une autre app, cette app devient responsable de son traitement.</li>
+            <li data-i18n="s3Li4">Certains fichiers temporaires peuvent rester sur l’appareil selon le fonctionnement du système.</li>
+          </ul>
+        </section>
+
+        <section id="tools" class="support-section">
+          <h2 data-i18n="s4Title">4. Aide sur les outils PDF</h2>
+
+          <h3 data-i18n="s4H1">OCR / extraction de texte</h3>
+          <p data-i18n="s4P1">
+            L’OCR peut extraire du texte depuis un scan ou un document, mais le résultat peut contenir des erreurs. Vérifiez toujours le texte avant de l’utiliser.
+          </p>
+
+          <h3 data-i18n="s4H2">Carte d’identité et passeport</h3>
+          <p data-i18n="s4P2">
+            Ces fonctions créent des PDF locaux à partir d’images. Scaneris ne fournit pas de vérification officielle d’identité, de KYC ou de certification administrative.
+          </p>
+
+          <h3 data-i18n="s4H3">Signature</h3>
+          <p data-i18n="s4P3">
+            La signature est une annotation visuelle locale. Elle ne remplace pas une signature électronique qualifiée et ne garantit pas une valeur juridique.
+          </p>
+
+          <h3 data-i18n="s4H4">PDF protégé</h3>
+          <p data-i18n="s4P4">
+            La protection par mot de passe peut limiter l’accès à un PDF, mais aucun système numérique ne garantit une sécurité absolue.
+          </p>
+
+          <h3 data-i18n="s4H5">QR codes</h3>
+          <p data-i18n="s4P5">
+            Avant d’ouvrir un lien provenant d’un QR code, vérifiez toujours sa destination. Les sites externes ne sont pas contrôlés par Scaneris.
+          </p>
+        </section>
+
+        <section id="privacy" class="support-section">
+          <h2 data-i18n="s5Title">5. Confidentialité et stockage local</h2>
+          <p data-i18n="s5P1">
+            Scaneris est conçu avec une approche local-first. L’application ne nécessite pas de compte utilisateur et ne propose pas de synchronisation cloud automatique dans la version actuelle.
+          </p>
+          <p data-i18n="s5P2">
+            Les fichiers quittent Scaneris uniquement lorsque vous utilisez volontairement une action de partage, d’export ou d’ouverture vers une autre application.
+          </p>
+          <p>
+            <a href="privacy.html" data-i18n="s5Link">Lire la politique de confidentialité →</a>
+          </p>
+        </section>
+
+        <section id="troubleshooting" class="support-section">
+          <h2 data-i18n="s6Title">6. Problèmes fréquents</h2>
+
+          <h3 data-i18n="s6H1">La caméra ne s’ouvre pas</h3>
+          <p data-i18n="s6P1">
+            Vérifiez que la permission caméra est autorisée dans les réglages de votre appareil. Redémarrer l’application peut aussi aider.
+          </p>
+
+          <h3 data-i18n="s6H2">L’import ne fonctionne pas</h3>
+          <p data-i18n="s6P2">
+            Vérifiez que le fichier est compatible et que l’accès aux photos ou fichiers est autorisé.
+          </p>
+
+          <h3 data-i18n="s6H3">L’OCR est incorrect</h3>
+          <p data-i18n="s6P3">
+            L’OCR dépend de la qualité de l’image, de la lumière, du cadrage et de la lisibilité du texte. Essayez avec une image plus nette.
+          </p>
+
+          <h3 data-i18n="s6H4">Le PDF généré ne s’ouvre pas</h3>
+          <p data-i18n="s6P4">
+            Réessayez l’export, vérifiez que le document contient des pages valides et ouvrez le PDF avec une application compatible.
+          </p>
+
+          <h3 data-i18n="s6H5">Le partage ne propose pas l’app souhaitée</h3>
+          <p data-i18n="s6P5">
+            Les options de partage dépendent des applications installées sur votre appareil et du système Android ou iOS.
+          </p>
+        </section>
+
+        <section id="bug" class="support-section">
+          <h2 data-i18n="s7Title">7. Signaler un problème</h2>
+          <p data-i18n="s7P1">
+            Pour aider le support à comprendre le problème, indiquez si possible :
+          </p>
+          <ul>
+            <li data-i18n="s7Li1">le modèle de votre appareil ;</li>
+            <li data-i18n="s7Li2">la version Android ou iOS ;</li>
+            <li data-i18n="s7Li3">la version de Scaneris ;</li>
+            <li data-i18n="s7Li4">la fonctionnalité concernée ;</li>
+            <li data-i18n="s7Li5">les étapes pour reproduire le problème ;</li>
+            <li data-i18n="s7Li6">une capture d’écran si nécessaire, sans partager de document sensible.</li>
+          </ul>
+          <div class="note">
+            <strong data-i18n="s7NoteTitle">Important</strong>
+            <p data-i18n="s7NoteText">
+              Évitez d’envoyer par email des documents sensibles, pièces d’identité, passeports, mots de passe ou informations confidentielles.
+            </p>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">
+      <p data-i18n="footerText">© 2026 Scaneris. Tous droits réservés.</p>
+    </footer>
+  </main>
+
+  <script>
+    const translations = {
+      fr: {
+        backHome: "← Centre légal",
+        eyebrow: "Support Scaneris",
+        heroTitle: "Aide et support",
+        heroSubtitle: "Retrouvez les informations utiles pour utiliser Scaneris, résoudre les problèmes courants et contacter le support.",
+        pillEmail: "Support par email",
+        pillLocal: "Application local-first",
+        pillUpdated: "Mise à jour : 1 mai 2026",
+
+        tocTitle: "Sommaire",
+        tocContact: "Contact",
+        tocStart: "Bien démarrer",
+        tocPermissions: "Permissions",
+        tocDocuments: "Documents",
+        tocTools: "Outils PDF",
+        tocPrivacy: "Confidentialité",
+        tocTroubleshooting: "Problèmes fréquents",
+        tocBug: "Signaler un bug",
+
+        contactTitle: "Contacter le support",
+        contactText: "Pour toute question, problème technique ou demande liée à Scaneris, vous pouvez contacter le support par email.",
+
+        s1Title: "1. Bien démarrer avec Scaneris",
+        s1P1: "Scaneris permet de scanner, organiser, transformer et partager des documents directement depuis votre appareil.",
+        s1Card1Title: "Scanner un document",
+        s1Card1Text: "Utilisez le bouton de scan pour capturer un document, ajuster les pages et créer un document local.",
+        s1Card2Title: "Importer",
+        s1Card2Text: "Importez une image ou un fichier compatible depuis votre appareil lorsque la fonction est disponible.",
+        s1Card3Title: "Documents",
+        s1Card3Text: "Retrouvez vos documents locaux, recherchez-les, ajoutez-les aux favoris et exportez-les en PDF.",
+        s1Card4Title: "Outils PDF",
+        s1Card4Text: "Utilisez les outils pour fusionner, compresser, diviser, protéger, filigraner ou transformer des documents.",
+
+        s2Title: "2. Permissions nécessaires",
+        s2P1: "Certaines fonctions nécessitent des permissions système. Ces permissions ne sont demandées que lorsqu’elles sont utiles au fonctionnement de l’application.",
+        s2Li1: "Caméra : nécessaire pour scanner des documents, cartes, passeports ou QR codes.",
+        s2Li2: "Photos / images : nécessaire pour importer une image depuis l’appareil.",
+        s2Li3: "Fichiers : nécessaire pour importer ou exporter des PDF et utiliser les options système.",
+        s2Li4: "Stockage local : nécessaire pour conserver les documents et préférences dans l’espace de l’application.",
+        s2NoteTitle: "Permission refusée ?",
+        s2NoteText: "Si une permission est refusée, certaines fonctions peuvent ne plus fonctionner. Vous pouvez généralement la réactiver depuis les réglages de votre appareil.",
+
+        s3Title: "3. Documents et exports",
+        s3P1: "Les documents créés ou importés dans Scaneris sont principalement stockés localement sur votre appareil.",
+        s3Li1: "Vous pouvez organiser vos documents, les rechercher et les ajouter aux favoris.",
+        s3Li2: "Vous pouvez exporter ou partager un PDF via les options système de votre appareil.",
+        s3Li3: "Lorsque vous partagez un fichier vers une autre app, cette app devient responsable de son traitement.",
+        s3Li4: "Certains fichiers temporaires peuvent rester sur l’appareil selon le fonctionnement du système.",
+
+        s4Title: "4. Aide sur les outils PDF",
+        s4H1: "OCR / extraction de texte",
+        s4P1: "L’OCR peut extraire du texte depuis un scan ou un document, mais le résultat peut contenir des erreurs. Vérifiez toujours le texte avant de l’utiliser.",
+        s4H2: "Carte d’identité et passeport",
+        s4P2: "Ces fonctions créent des PDF locaux à partir d’images. Scaneris ne fournit pas de vérification officielle d’identité, de KYC ou de certification administrative.",
+        s4H3: "Signature",
+        s4P3: "La signature est une annotation visuelle locale. Elle ne remplace pas une signature électronique qualifiée et ne garantit pas une valeur juridique.",
+        s4H4: "PDF protégé",
+        s4P4: "La protection par mot de passe peut limiter l’accès à un PDF, mais aucun système numérique ne garantit une sécurité absolue.",
+        s4H5: "QR codes",
+        s4P5: "Avant d’ouvrir un lien provenant d’un QR code, vérifiez toujours sa destination. Les sites externes ne sont pas contrôlés par Scaneris.",
+
+        s5Title: "5. Confidentialité et stockage local",
+        s5P1: "Scaneris est conçu avec une approche local-first. L’application ne nécessite pas de compte utilisateur et ne propose pas de synchronisation cloud automatique dans la version actuelle.",
+        s5P2: "Les fichiers quittent Scaneris uniquement lorsque vous utilisez volontairement une action de partage, d’export ou d’ouverture vers une autre application.",
+        s5Link: "Lire la politique de confidentialité →",
+
+        s6Title: "6. Problèmes fréquents",
+        s6H1: "La caméra ne s’ouvre pas",
+        s6P1: "Vérifiez que la permission caméra est autorisée dans les réglages de votre appareil. Redémarrer l’application peut aussi aider.",
+        s6H2: "L’import ne fonctionne pas",
+        s6P2: "Vérifiez que le fichier est compatible et que l’accès aux photos ou fichiers est autorisé.",
+        s6H3: "L’OCR est incorrect",
+        s6P3: "L’OCR dépend de la qualité de l’image, de la lumière, du cadrage et de la lisibilité du texte. Essayez avec une image plus nette.",
+        s6H4: "Le PDF généré ne s’ouvre pas",
+        s6P4: "Réessayez l’export, vérifiez que le document contient des pages valides et ouvrez le PDF avec une application compatible.",
+        s6H5: "Le partage ne propose pas l’app souhaitée",
+        s6P5: "Les options de partage dépendent des applications installées sur votre appareil et du système Android ou iOS.",
+
+        s7Title: "7. Signaler un problème",
+        s7P1: "Pour aider le support à comprendre le problème, indiquez si possible :",
+        s7Li1: "le modèle de votre appareil ;",
+        s7Li2: "la version Android ou iOS ;",
+        s7Li3: "la version de Scaneris ;",
+        s7Li4: "la fonctionnalité concernée ;",
+        s7Li5: "les étapes pour reproduire le problème ;",
+        s7Li6: "une capture d’écran si nécessaire, sans partager de document sensible.",
+        s7NoteTitle: "Important",
+        s7NoteText: "Évitez d’envoyer par email des documents sensibles, pièces d’identité, passeports, mots de passe ou informations confidentielles.",
+
+        footerText: "© 2026 Scaneris. Tous droits réservés."
+      },
+
+      en: {
+        backHome: "← Legal Center",
+        eyebrow: "Scaneris Support",
+        heroTitle: "Help and support",
+        heroSubtitle: "Find useful information to use Scaneris, solve common issues and contact support.",
+        pillEmail: "Email support",
+        pillLocal: "Local-first app",
+        pillUpdated: "Updated: May 1, 2026",
+
+        tocTitle: "Contents",
+        tocContact: "Contact",
+        tocStart: "Getting started",
+        tocPermissions: "Permissions",
+        tocDocuments: "Documents",
+        tocTools: "PDF tools",
+        tocPrivacy: "Privacy",
+        tocTroubleshooting: "Common issues",
+        tocBug: "Report a bug",
+
+        contactTitle: "Contact support",
+        contactText: "For any question, technical issue or request related to Scaneris, you can contact support by email.",
+
+        s1Title: "1. Getting started with Scaneris",
+        s1P1: "Scaneris helps scan, organize, transform and share documents directly from your device.",
+        s1Card1Title: "Scan a document",
+        s1Card1Text: "Use the scan button to capture a document, adjust pages and create a local document.",
+        s1Card2Title: "Import",
+        s1Card2Text: "Import an image or compatible file from your device when the feature is available.",
+        s1Card3Title: "Documents",
+        s1Card3Text: "Find your local documents, search them, mark them as favorites and export them as PDFs.",
+        s1Card4Title: "PDF tools",
+        s1Card4Text: "Use tools to merge, compress, split, protect, watermark or transform documents.",
+
+        s2Title: "2. Required permissions",
+        s2P1: "Some features require system permissions. These permissions are requested only when they are useful for the app to work.",
+        s2Li1: "Camera: required to scan documents, cards, passports or QR codes.",
+        s2Li2: "Photos / images: required to import an image from the device.",
+        s2Li3: "Files: required to import or export PDFs and use system options.",
+        s2Li4: "Local storage: required to keep documents and preferences in the app space.",
+        s2NoteTitle: "Permission denied?",
+        s2NoteText: "If a permission is denied, some features may stop working. You can usually re-enable it from your device settings.",
+
+        s3Title: "3. Documents and exports",
+        s3P1: "Documents created or imported in Scaneris are mainly stored locally on your device.",
+        s3Li1: "You can organize your documents, search them and mark them as favorites.",
+        s3Li2: "You can export or share a PDF through your device’s system options.",
+        s3Li3: "When you share a file to another app, that app becomes responsible for its processing.",
+        s3Li4: "Some temporary files may remain on the device depending on system behavior.",
+
+        s4Title: "4. Help with PDF tools",
+        s4H1: "OCR / text extraction",
+        s4P1: "OCR can extract text from a scan or document, but the result may contain errors. Always review the text before using it.",
+        s4H2: "ID card and passport",
+        s4P2: "These features create local PDFs from images. Scaneris does not provide official identity verification, KYC or administrative certification.",
+        s4H3: "Signature",
+        s4P3: "The signature is a local visual annotation. It does not replace a qualified electronic signature and does not guarantee legal value.",
+        s4H4: "Protected PDF",
+        s4P4: "Password protection may restrict access to a PDF, but no digital system guarantees absolute security.",
+        s4H5: "QR codes",
+        s4P5: "Before opening a link from a QR code, always check its destination. External websites are not controlled by Scaneris.",
+
+        s5Title: "5. Privacy and local storage",
+        s5P1: "Scaneris is designed with a local-first approach. The app does not require a user account and does not provide automatic cloud synchronization in the current version.",
+        s5P2: "Files leave Scaneris only when you deliberately use a sharing, export or opening action to another app.",
+        s5Link: "Read the Privacy Policy →",
+
+        s6Title: "6. Common issues",
+        s6H1: "The camera does not open",
+        s6P1: "Check that camera permission is allowed in your device settings. Restarting the app may also help.",
+        s6H2: "Import does not work",
+        s6P2: "Check that the file is compatible and that access to photos or files is allowed.",
+        s6H3: "OCR is incorrect",
+        s6P3: "OCR depends on image quality, lighting, framing and text readability. Try again with a clearer image.",
+        s6H4: "The generated PDF does not open",
+        s6P4: "Try exporting again, check that the document contains valid pages and open the PDF with a compatible app.",
+        s6H5: "The share sheet does not show the app I want",
+        s6P5: "Sharing options depend on the apps installed on your device and on Android or iOS.",
+
+        s7Title: "7. Report an issue",
+        s7P1: "To help support understand the issue, please include if possible:",
+        s7Li1: "your device model;",
+        s7Li2: "your Android or iOS version;",
+        s7Li3: "your Scaneris version;",
+        s7Li4: "the feature involved;",
+        s7Li5: "the steps to reproduce the issue;",
+        s7Li6: "a screenshot if needed, without sharing sensitive documents.",
+        s7NoteTitle: "Important",
+        s7NoteText: "Avoid sending sensitive documents, IDs, passports, passwords or confidential information by email.",
+
+        footerText: "© 2026 Scaneris. All rights reserved."
+      }
+    };
+
+    function showLanguage(lang) {
+      const selected = translations[lang] ? lang : "fr";
+      document.documentElement.lang = selected;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (translations[selected][key]) {
+          element.textContent = translations[selected][key];
+        }
+      });
+
+      document.getElementById("btn-fr").classList.toggle("active", selected === "fr");
+      document.getElementById("btn-en").classList.toggle("active", selected === "en");
+
+      try {
+        localStorage.setItem("scaneris_support_lang", selected);
+      } catch (_) {}
+    }
+
+    (function initLanguage() {
+      let saved = null;
+
+      try {
+        saved = localStorage.getItem("scaneris_support_lang");
+      } catch (_) {}
+
+      const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("en")
+        ? "en"
+        : "fr";
+
+      showLanguage(saved || browserLang);
+    })();
+  </script>
+</body>
+</html>
