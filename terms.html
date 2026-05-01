@@ -1,1 +1,905 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scaneris — Terms of Use / Conditions d’utilisation</title>
+  <meta
+    name="description"
+    content="Scaneris Terms of Use — Conditions d’utilisation de Scaneris."
+  />
 
+  <style>
+    :root {
+      --bg-0: #f5f8ff;
+      --text: #101828;
+      --text-soft: #475467;
+      --muted: #667085;
+      --line: rgba(16, 24, 40, 0.10);
+      --blue: #3478ff;
+      --blue-dark: #1d63f0;
+      --blue-soft: #e8f0ff;
+      --green-soft: #eafaf1;
+      --purple-soft: #f1ecff;
+      --orange-soft: #fff2e6;
+      --shadow: 0 24px 70px rgba(28, 55, 100, 0.14);
+      --shadow-soft: 0 14px 36px rgba(28, 55, 100, 0.10);
+      --radius-xl: 34px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(52, 120, 255, 0.20), transparent 34%),
+        radial-gradient(circle at top right, rgba(82, 214, 255, 0.16), transparent 32%),
+        linear-gradient(180deg, var(--bg-0), #ffffff 42%, #f8fbff 100%);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .page {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 850;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 15px;
+      background:
+        linear-gradient(145deg, #ffffff 0%, #eaf1ff 35%, #3478ff 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.85),
+        0 12px 28px rgba(52, 120, 255, 0.24);
+      position: relative;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 23px;
+      left: 11px;
+      top: 8px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+    }
+
+    .brand span { font-size: 18px; }
+
+    .top-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      color: var(--text-soft);
+      font-size: 14px;
+      font-weight: 850;
+      box-shadow: 0 10px 28px rgba(28, 55, 100, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .language-switch {
+      display: inline-flex;
+      padding: 5px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 28px rgba(28, 55, 100, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .language-switch button {
+      border: 0;
+      cursor: pointer;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 850;
+      transition: all 180ms ease;
+    }
+
+    .language-switch button.active {
+      color: #ffffff;
+      background: var(--blue);
+      box-shadow: 0 8px 18px rgba(52, 120, 255, 0.28);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.96) 0%, rgba(238,246,255,0.94) 48%, rgba(231,240,255,0.90) 100%);
+      box-shadow: var(--shadow);
+      padding: 46px;
+      margin-bottom: 22px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      right: -130px;
+      top: -140px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(52,120,255,0.25), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      right: 80px;
+      bottom: -96px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(82,214,255,0.22), transparent 66%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: rgba(52, 120, 255, 0.10);
+      color: var(--blue-dark);
+      font-size: 14px;
+      font-weight: 850;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 0 6px rgba(52,120,255,0.12);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+    }
+
+    .hero-subtitle {
+      margin: 18px 0 0;
+      max-width: 780px;
+      font-size: 18px;
+      color: var(--text-soft);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid var(--line);
+      color: var(--text-soft);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .pill-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 7px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow-soft);
+      padding: 18px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .toc-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 900;
+      margin: 0 0 12px;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--text-soft);
+      font-weight: 750;
+      font-size: 14px;
+      padding: 9px 10px;
+      border-radius: 14px;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .terms-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow-soft);
+      padding: 34px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .terms-section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .terms-section:first-child { padding-top: 0; }
+    .terms-section:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      line-height: 1.16;
+      letter-spacing: -0.045em;
+    }
+
+    p {
+      margin: 0 0 13px;
+      color: var(--text-soft);
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 28px;
+      margin: 9px 0;
+      color: var(--text-soft);
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 0 5px rgba(52,120,255,0.10);
+    }
+
+    .note {
+      border-radius: 22px;
+      border: 1px solid rgba(52, 120, 255, 0.18);
+      background:
+        linear-gradient(135deg, rgba(232, 240, 255, 0.92), rgba(255, 255, 255, 0.80));
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+
+    .contact-card {
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at top left, rgba(52,120,255,0.22), transparent 32%),
+        linear-gradient(135deg, #101828, #172554);
+      color: #ffffff;
+      padding: 26px;
+      margin-top: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-card p { color: rgba(255,255,255,0.78); }
+
+    .contact-card a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    .legal-muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    strong { color: var(--text); }
+
+    @media (max-width: 920px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: relative; top: 0; }
+      .terms-card { padding: 28px; }
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 18px 14px 46px; }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .top-actions {
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .back-link {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .language-switch {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .language-switch button { width: 100%; }
+
+      .hero {
+        padding: 30px 22px;
+        border-radius: 28px;
+      }
+
+      .hero-subtitle { font-size: 16px; }
+
+      .terms-card {
+        padding: 22px;
+        border-radius: 28px;
+      }
+
+      .toc { border-radius: 24px; }
+
+      h2 { font-size: 22px; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero,
+      .toc,
+      .terms-card {
+        animation: rise 520ms ease both;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Scaneris Legal Center">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Scaneris</span>
+      </a>
+
+      <div class="top-actions">
+        <a class="back-link" href="index.html" data-i18n="backHome">← Centre légal</a>
+
+        <div class="language-switch" aria-label="Language selector">
+          <button id="btn-fr" class="active" type="button" onclick="showLanguage('fr')">
+            Français
+          </button>
+          <button id="btn-en" type="button" onclick="showLanguage('en')">
+            English
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span data-i18n="eyebrow">Conditions Scaneris</span>
+        </div>
+
+        <h1 data-i18n="heroTitle">Conditions d’utilisation</h1>
+
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Ces conditions expliquent les règles d’utilisation de Scaneris, ses limites, vos responsabilités et les précautions à prendre lors du traitement de documents sensibles.
+        </p>
+
+        <div class="hero-meta">
+          <span class="pill">
+            <span class="pill-icon">✓</span>
+            <span data-i18n="pillLocal">Application local-first</span>
+          </span>
+          <span class="pill">
+            <span class="pill-icon">✓</span>
+            <span data-i18n="pillNoLegal">Pas de service juridique</span>
+          </span>
+          <span class="pill">
+            <span class="pill-icon">✓</span>
+            <span data-i18n="pillUpdated">Mise à jour : 1 mai 2026</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title" data-i18n="tocTitle">Sommaire</p>
+        <a href="#acceptance" data-i18n="tocAcceptance">Acceptation</a>
+        <a href="#app" data-i18n="tocApp">Service Scaneris</a>
+        <a href="#responsibility" data-i18n="tocResponsibility">Responsabilités</a>
+        <a href="#sensitive" data-i18n="tocSensitive">Documents sensibles</a>
+        <a href="#limits" data-i18n="tocLimits">Limites des fonctions</a>
+        <a href="#thirdparty" data-i18n="tocThirdParty">Services tiers</a>
+        <a href="#availability" data-i18n="tocAvailability">Disponibilité</a>
+        <a href="#changes" data-i18n="tocChanges">Modifications</a>
+        <a href="#contact" data-i18n="tocContact">Contact</a>
+      </nav>
+
+      <article class="terms-card">
+        <section id="acceptance" class="terms-section">
+          <h2 data-i18n="s1Title">1. Acceptation des conditions</h2>
+          <p data-i18n="s1P1">
+            En utilisant Scaneris, vous acceptez les présentes Conditions d’utilisation. Si vous n’acceptez pas ces conditions, vous devez cesser d’utiliser l’application.
+          </p>
+          <p data-i18n="s1P2">
+            Ces conditions s’appliquent à l’utilisation de Scaneris sur Android, iOS ou toute autre plateforme où l’application pourrait être disponible.
+          </p>
+          <div class="note">
+            <strong data-i18n="s1NoteTitle">Note importante</strong>
+            <p data-i18n="s1NoteText">
+              Ces conditions sont rédigées pour expliquer clairement l’usage de l’application. Elles ne constituent pas un conseil juridique personnalisé.
+            </p>
+          </div>
+        </section>
+
+        <section id="app" class="terms-section">
+          <h2 data-i18n="s2Title">2. Description de Scaneris</h2>
+          <p data-i18n="s2P1">
+            Scaneris est une application de scan de documents, d’organisation locale et d’outils PDF. Elle peut notamment permettre de scanner des documents, importer des images ou fichiers PDF, générer des PDF, extraire du texte par OCR, créer ou lire des QR codes, fusionner, diviser, compresser, protéger ou filigraner des PDF, et ajouter une signature visuelle.
+          </p>
+          <p data-i18n="s2P2">
+            Scaneris est conçue avec une approche local-first. L’application ne fournit pas de compte utilisateur, de synchronisation cloud automatique ou de service de stockage distant propriétaire dans la version actuelle.
+          </p>
+        </section>
+
+        <section id="responsibility" class="terms-section">
+          <h2 data-i18n="s3Title">3. Responsabilités de l’utilisateur</h2>
+          <p data-i18n="s3P1">
+            Vous êtes responsable des documents que vous scannez, importez, modifiez, conservez, exportez ou partagez avec Scaneris.
+          </p>
+          <ul>
+            <li data-i18n="s3Li1">Vous devez utiliser l’application de manière légale et raisonnable.</li>
+            <li data-i18n="s3Li2">Vous devez vérifier l’exactitude des documents, textes OCR, PDF générés et informations exportées.</li>
+            <li data-i18n="s3Li3">Vous devez vous assurer que vous avez le droit de scanner, traiter, conserver ou partager les documents concernés.</li>
+            <li data-i18n="s3Li4">Vous êtes responsable des services tiers vers lesquels vous partagez vos fichiers.</li>
+          </ul>
+        </section>
+
+        <section id="sensitive" class="terms-section">
+          <h2 data-i18n="s4Title">4. Documents sensibles</h2>
+          <p data-i18n="s4P1">
+            Scaneris peut être utilisé avec des documents personnels ou sensibles, y compris des documents administratifs, factures, contrats, cartes d’identité ou passeports.
+          </p>
+          <p data-i18n="s4P2">
+            Vous devez protéger votre appareil, éviter de partager des documents sensibles vers des services non fiables et supprimer les fichiers dont vous n’avez plus besoin.
+          </p>
+          <p data-i18n="s4P3">
+            Scaneris ne fournit pas de vérification officielle d’identité, de certification de document, de KYC, d’authentification légale ou de garantie de validité administrative.
+          </p>
+        </section>
+
+        <section id="limits" class="terms-section">
+          <h2 data-i18n="s5Title">5. Limites des fonctionnalités</h2>
+          <p data-i18n="s5P1">
+            Certaines fonctionnalités de Scaneris sont pratiques et automatisées, mais elles peuvent produire des résultats imparfaits selon la qualité de l’image, le document, l’appareil ou le contexte d’utilisation.
+          </p>
+          <ul>
+            <li data-i18n="s5Li1">OCR : le texte extrait peut contenir des erreurs et doit toujours être vérifié.</li>
+            <li data-i18n="s5Li2">Signature : la signature est une annotation visuelle locale et n’est pas une signature électronique qualifiée.</li>
+            <li data-i18n="s5Li3">PDF protégé : la protection par mot de passe ne garantit pas une sécurité absolue dans toutes les situations.</li>
+            <li data-i18n="s5Li4">Carte d’identité / passeport : ces fonctions créent des PDF locaux, sans vérification officielle.</li>
+            <li data-i18n="s5Li5">QR codes : l’utilisateur doit vérifier les liens avant de les ouvrir.</li>
+            <li data-i18n="s5Li6">Compression PDF : le résultat peut varier selon le type de document et le niveau de compression choisi.</li>
+          </ul>
+        </section>
+
+        <section id="thirdparty" class="terms-section">
+          <h2 data-i18n="s6Title">6. Partage, export et services tiers</h2>
+          <p data-i18n="s6P1">
+            Scaneris peut utiliser les options de partage ou d’ouverture du système pour envoyer un fichier, un texte, une image, un PDF ou un lien vers une autre application.
+          </p>
+          <p data-i18n="s6P2">
+            Lorsque vous choisissez une application tierce, un service cloud, un navigateur, une messagerie ou un gestionnaire de fichiers, le traitement dépend de ce service tiers. Scaneris ne contrôle pas ses conditions, sa sécurité ou sa politique de confidentialité.
+          </p>
+          <p data-i18n="s6P3">
+            Scaneris ne propose pas de synchronisation automatique avec Google Drive, iCloud ou un autre service cloud dans la version actuelle.
+          </p>
+        </section>
+
+        <section id="availability" class="terms-section">
+          <h2 data-i18n="s7Title">7. Disponibilité, erreurs et mises à jour</h2>
+          <p data-i18n="s7P1">
+            Scaneris est fourni en l’état, avec une volonté de fiabilité et de qualité, mais sans garantie que l’application soit toujours disponible, sans erreur ou compatible avec tous les documents, appareils ou versions système.
+          </p>
+          <p data-i18n="s7P2">
+            Des mises à jour peuvent modifier, améliorer, ajouter ou retirer certaines fonctionnalités pour des raisons techniques, de sécurité, de conformité ou de qualité produit.
+          </p>
+        </section>
+
+        <section class="terms-section">
+          <h2 data-i18n="s8Title">8. Utilisations interdites</h2>
+          <p data-i18n="s8P1">
+            Vous ne devez pas utiliser Scaneris pour :
+          </p>
+          <ul>
+            <li data-i18n="s8Li1">violer une loi, un droit ou une obligation contractuelle ;</li>
+            <li data-i18n="s8Li2">créer, modifier ou partager des documents frauduleux ;</li>
+            <li data-i18n="s8Li3">usurper une identité ou tromper un tiers ;</li>
+            <li data-i18n="s8Li4">contourner des contrôles administratifs, juridiques ou de sécurité ;</li>
+            <li data-i18n="s8Li5">porter atteinte aux droits, à la vie privée ou aux données d’une autre personne.</li>
+          </ul>
+        </section>
+
+        <section class="terms-section">
+          <h2 data-i18n="s9Title">9. Propriété intellectuelle</h2>
+          <p data-i18n="s9P1">
+            Scaneris, son interface, son nom, ses éléments visuels et ses fonctionnalités sont protégés par les droits applicables. Les bibliothèques open source utilisées par l’application restent soumises à leurs propres licences.
+          </p>
+          <p data-i18n="s9P2">
+            Vous conservez vos droits sur les documents que vous créez, importez ou traitez avec l’application, sous réserve des droits de tiers éventuellement applicables à ces documents.
+          </p>
+        </section>
+
+        <section id="changes" class="terms-section">
+          <h2 data-i18n="s10Title">10. Modifications des conditions</h2>
+          <p data-i18n="s10P1">
+            Ces Conditions d’utilisation peuvent être mises à jour pour refléter l’évolution de Scaneris, l’ajout de nouvelles fonctionnalités, des changements techniques ou des exigences d’Android, iOS, Google Play ou Apple App Store.
+          </p>
+          <p class="legal-muted" data-i18n="s10P2">
+            Dernière mise à jour : 1 mai 2026.
+          </p>
+        </section>
+
+        <section id="contact" class="terms-section">
+          <div class="contact-card">
+            <h2 data-i18n="contactTitle">Contact</h2>
+            <p data-i18n="contactText">
+              Pour toute question concernant ces Conditions d’utilisation ou Scaneris, vous pouvez contacter le support.
+            </p>
+            <p>
+              <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
+            </p>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">
+      <p data-i18n="footerText">© 2026 Scaneris. Tous droits réservés.</p>
+    </footer>
+  </main>
+
+  <script>
+    const translations = {
+      fr: {
+        backHome: "← Centre légal",
+        eyebrow: "Conditions Scaneris",
+        heroTitle: "Conditions d’utilisation",
+        heroSubtitle: "Ces conditions expliquent les règles d’utilisation de Scaneris, ses limites, vos responsabilités et les précautions à prendre lors du traitement de documents sensibles.",
+        pillLocal: "Application local-first",
+        pillNoLegal: "Pas de service juridique",
+        pillUpdated: "Mise à jour : 1 mai 2026",
+
+        tocTitle: "Sommaire",
+        tocAcceptance: "Acceptation",
+        tocApp: "Service Scaneris",
+        tocResponsibility: "Responsabilités",
+        tocSensitive: "Documents sensibles",
+        tocLimits: "Limites des fonctions",
+        tocThirdParty: "Services tiers",
+        tocAvailability: "Disponibilité",
+        tocChanges: "Modifications",
+        tocContact: "Contact",
+
+        s1Title: "1. Acceptation des conditions",
+        s1P1: "En utilisant Scaneris, vous acceptez les présentes Conditions d’utilisation. Si vous n’acceptez pas ces conditions, vous devez cesser d’utiliser l’application.",
+        s1P2: "Ces conditions s’appliquent à l’utilisation de Scaneris sur Android, iOS ou toute autre plateforme où l’application pourrait être disponible.",
+        s1NoteTitle: "Note importante",
+        s1NoteText: "Ces conditions sont rédigées pour expliquer clairement l’usage de l’application. Elles ne constituent pas un conseil juridique personnalisé.",
+
+        s2Title: "2. Description de Scaneris",
+        s2P1: "Scaneris est une application de scan de documents, d’organisation locale et d’outils PDF. Elle peut notamment permettre de scanner des documents, importer des images ou fichiers PDF, générer des PDF, extraire du texte par OCR, créer ou lire des QR codes, fusionner, diviser, compresser, protéger ou filigraner des PDF, et ajouter une signature visuelle.",
+        s2P2: "Scaneris est conçue avec une approche local-first. L’application ne fournit pas de compte utilisateur, de synchronisation cloud automatique ou de service de stockage distant propriétaire dans la version actuelle.",
+
+        s3Title: "3. Responsabilités de l’utilisateur",
+        s3P1: "Vous êtes responsable des documents que vous scannez, importez, modifiez, conservez, exportez ou partagez avec Scaneris.",
+        s3Li1: "Vous devez utiliser l’application de manière légale et raisonnable.",
+        s3Li2: "Vous devez vérifier l’exactitude des documents, textes OCR, PDF générés et informations exportées.",
+        s3Li3: "Vous devez vous assurer que vous avez le droit de scanner, traiter, conserver ou partager les documents concernés.",
+        s3Li4: "Vous êtes responsable des services tiers vers lesquels vous partagez vos fichiers.",
+
+        s4Title: "4. Documents sensibles",
+        s4P1: "Scaneris peut être utilisé avec des documents personnels ou sensibles, y compris des documents administratifs, factures, contrats, cartes d’identité ou passeports.",
+        s4P2: "Vous devez protéger votre appareil, éviter de partager des documents sensibles vers des services non fiables et supprimer les fichiers dont vous n’avez plus besoin.",
+        s4P3: "Scaneris ne fournit pas de vérification officielle d’identité, de certification de document, de KYC, d’authentification légale ou de garantie de validité administrative.",
+
+        s5Title: "5. Limites des fonctionnalités",
+        s5P1: "Certaines fonctionnalités de Scaneris sont pratiques et automatisées, mais elles peuvent produire des résultats imparfaits selon la qualité de l’image, le document, l’appareil ou le contexte d’utilisation.",
+        s5Li1: "OCR : le texte extrait peut contenir des erreurs et doit toujours être vérifié.",
+        s5Li2: "Signature : la signature est une annotation visuelle locale et n’est pas une signature électronique qualifiée.",
+        s5Li3: "PDF protégé : la protection par mot de passe ne garantit pas une sécurité absolue dans toutes les situations.",
+        s5Li4: "Carte d’identité / passeport : ces fonctions créent des PDF locaux, sans vérification officielle.",
+        s5Li5: "QR codes : l’utilisateur doit vérifier les liens avant de les ouvrir.",
+        s5Li6: "Compression PDF : le résultat peut varier selon le type de document et le niveau de compression choisi.",
+
+        s6Title: "6. Partage, export et services tiers",
+        s6P1: "Scaneris peut utiliser les options de partage ou d’ouverture du système pour envoyer un fichier, un texte, une image, un PDF ou un lien vers une autre application.",
+        s6P2: "Lorsque vous choisissez une application tierce, un service cloud, un navigateur, une messagerie ou un gestionnaire de fichiers, le traitement dépend de ce service tiers. Scaneris ne contrôle pas ses conditions, sa sécurité ou sa politique de confidentialité.",
+        s6P3: "Scaneris ne propose pas de synchronisation automatique avec Google Drive, iCloud ou un autre service cloud dans la version actuelle.",
+
+        s7Title: "7. Disponibilité, erreurs et mises à jour",
+        s7P1: "Scaneris est fourni en l’état, avec une volonté de fiabilité et de qualité, mais sans garantie que l’application soit toujours disponible, sans erreur ou compatible avec tous les documents, appareils ou versions système.",
+        s7P2: "Des mises à jour peuvent modifier, améliorer, ajouter ou retirer certaines fonctionnalités pour des raisons techniques, de sécurité, de conformité ou de qualité produit.",
+
+        s8Title: "8. Utilisations interdites",
+        s8P1: "Vous ne devez pas utiliser Scaneris pour :",
+        s8Li1: "violer une loi, un droit ou une obligation contractuelle ;",
+        s8Li2: "créer, modifier ou partager des documents frauduleux ;",
+        s8Li3: "usurper une identité ou tromper un tiers ;",
+        s8Li4: "contourner des contrôles administratifs, juridiques ou de sécurité ;",
+        s8Li5: "porter atteinte aux droits, à la vie privée ou aux données d’une autre personne.",
+
+        s9Title: "9. Propriété intellectuelle",
+        s9P1: "Scaneris, son interface, son nom, ses éléments visuels et ses fonctionnalités sont protégés par les droits applicables. Les bibliothèques open source utilisées par l’application restent soumises à leurs propres licences.",
+        s9P2: "Vous conservez vos droits sur les documents que vous créez, importez ou traitez avec l’application, sous réserve des droits de tiers éventuellement applicables à ces documents.",
+
+        s10Title: "10. Modifications des conditions",
+        s10P1: "Ces Conditions d’utilisation peuvent être mises à jour pour refléter l’évolution de Scaneris, l’ajout de nouvelles fonctionnalités, des changements techniques ou des exigences d’Android, iOS, Google Play ou Apple App Store.",
+        s10P2: "Dernière mise à jour : 1 mai 2026.",
+
+        contactTitle: "Contact",
+        contactText: "Pour toute question concernant ces Conditions d’utilisation ou Scaneris, vous pouvez contacter le support.",
+        footerText: "© 2026 Scaneris. Tous droits réservés."
+      },
+
+      en: {
+        backHome: "← Legal Center",
+        eyebrow: "Scaneris Terms",
+        heroTitle: "Terms of Use",
+        heroSubtitle: "These terms explain the rules for using Scaneris, its limitations, your responsibilities and the precautions to take when handling sensitive documents.",
+        pillLocal: "Local-first app",
+        pillNoLegal: "Not a legal service",
+        pillUpdated: "Updated: May 1, 2026",
+
+        tocTitle: "Contents",
+        tocAcceptance: "Acceptance",
+        tocApp: "Scaneris service",
+        tocResponsibility: "Responsibilities",
+        tocSensitive: "Sensitive documents",
+        tocLimits: "Feature limitations",
+        tocThirdParty: "Third-party services",
+        tocAvailability: "Availability",
+        tocChanges: "Changes",
+        tocContact: "Contact",
+
+        s1Title: "1. Acceptance of the terms",
+        s1P1: "By using Scaneris, you agree to these Terms of Use. If you do not agree with these terms, you must stop using the app.",
+        s1P2: "These terms apply to the use of Scaneris on Android, iOS or any other platform where the app may be available.",
+        s1NoteTitle: "Important note",
+        s1NoteText: "These terms are written to clearly explain the use of the app. They do not constitute personalized legal advice.",
+
+        s2Title: "2. Description of Scaneris",
+        s2P1: "Scaneris is a document scanning, local organization and PDF tools app. It may allow users to scan documents, import images or PDF files, generate PDFs, extract text through OCR, create or read QR codes, merge, split, compress, protect or watermark PDFs, and add a visual signature.",
+        s2P2: "Scaneris is designed with a local-first approach. In the current version, the app does not provide a user account, automatic cloud synchronization or a proprietary remote storage service.",
+
+        s3Title: "3. User responsibilities",
+        s3P1: "You are responsible for the documents you scan, import, modify, keep, export or share with Scaneris.",
+        s3Li1: "You must use the app legally and reasonably.",
+        s3Li2: "You must verify the accuracy of documents, OCR text, generated PDFs and exported information.",
+        s3Li3: "You must ensure that you have the right to scan, process, keep or share the relevant documents.",
+        s3Li4: "You are responsible for the third-party services to which you share your files.",
+
+        s4Title: "4. Sensitive documents",
+        s4P1: "Scaneris may be used with personal or sensitive documents, including administrative documents, invoices, contracts, ID cards or passports.",
+        s4P2: "You should protect your device, avoid sharing sensitive documents to untrusted services and delete files you no longer need.",
+        s4P3: "Scaneris does not provide official identity verification, document certification, KYC, legal authentication or any guarantee of administrative validity.",
+
+        s5Title: "5. Feature limitations",
+        s5P1: "Some Scaneris features are practical and automated, but they may produce imperfect results depending on image quality, the document, the device or the usage context.",
+        s5Li1: "OCR: extracted text may contain errors and should always be reviewed.",
+        s5Li2: "Signature: the signature is a local visual annotation and is not a qualified electronic signature.",
+        s5Li3: "Protected PDF: password protection does not guarantee absolute security in all situations.",
+        s5Li4: "ID card / passport: these features create local PDFs without official verification.",
+        s5Li5: "QR codes: the user should verify links before opening them.",
+        s5Li6: "PDF compression: results may vary depending on the document type and selected compression level.",
+
+        s6Title: "6. Sharing, export and third-party services",
+        s6P1: "Scaneris may use system sharing or opening options to send a file, text, image, PDF or link to another app.",
+        s6P2: "When you choose a third-party app, cloud service, browser, messaging app or file manager, processing depends on that third-party service. Scaneris does not control its terms, security or privacy policy.",
+        s6P3: "Scaneris does not provide automatic synchronization with Google Drive, iCloud or any other cloud service in the current version.",
+
+        s7Title: "7. Availability, errors and updates",
+        s7P1: "Scaneris is provided as is, with an intention of reliability and quality, but without any guarantee that the app will always be available, error-free or compatible with all documents, devices or system versions.",
+        s7P2: "Updates may modify, improve, add or remove certain features for technical, security, compliance or product quality reasons.",
+
+        s8Title: "8. Prohibited uses",
+        s8P1: "You must not use Scaneris to:",
+        s8Li1: "violate any law, right or contractual obligation;",
+        s8Li2: "create, modify or share fraudulent documents;",
+        s8Li3: "impersonate someone or mislead a third party;",
+        s8Li4: "bypass administrative, legal or security controls;",
+        s8Li5: "harm the rights, privacy or data of another person.",
+
+        s9Title: "9. Intellectual property",
+        s9P1: "Scaneris, its interface, name, visual elements and features are protected by applicable rights. Open source libraries used by the app remain subject to their own licenses.",
+        s9P2: "You keep your rights to the documents you create, import or process with the app, subject to any third-party rights that may apply to those documents.",
+
+        s10Title: "10. Changes to the terms",
+        s10P1: "These Terms of Use may be updated to reflect changes to Scaneris, new features, technical changes or Android, iOS, Google Play or Apple App Store requirements.",
+        s10P2: "Last updated: May 1, 2026.",
+
+        contactTitle: "Contact",
+        contactText: "For any question about these Terms of Use or Scaneris, you can contact support.",
+        footerText: "© 2026 Scaneris. All rights reserved."
+      }
+    };
+
+    function showLanguage(lang) {
+      const selected = translations[lang] ? lang : "fr";
+      document.documentElement.lang = selected;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (translations[selected][key]) {
+          element.textContent = translations[selected][key];
+        }
+      });
+
+      document.getElementById("btn-fr").classList.toggle("active", selected === "fr");
+      document.getElementById("btn-en").classList.toggle("active", selected === "en");
+
+      try {
+        localStorage.setItem("scaneris_terms_lang", selected);
+      } catch (_) {}
+    }
+
+    (function initLanguage() {
+      let saved = null;
+
+      try {
+        saved = localStorage.getItem("scaneris_terms_lang");
+      } catch (_) {}
+
+      const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("en")
+        ? "en"
+        : "fr";
+
+      showLanguage(saved || browserLang);
+    })();
+  </script>
+</body>
+</html>
