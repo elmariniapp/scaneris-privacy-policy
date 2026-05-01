@@ -1,1 +1,956 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scaneris — Open Source Licenses / Licences open source</title>
+  <meta
+    name="description"
+    content="Scaneris Open Source Licenses — Licences open source et dépendances techniques."
+  />
 
+  <style>
+    :root {
+      --bg-0: #f5f8ff;
+      --text: #101828;
+      --text-soft: #475467;
+      --muted: #667085;
+      --line: rgba(16, 24, 40, 0.10);
+      --blue: #3478ff;
+      --blue-dark: #1d63f0;
+      --blue-soft: #e8f0ff;
+      --green-soft: #eafaf1;
+      --purple-soft: #f1ecff;
+      --orange-soft: #fff2e6;
+      --shadow: 0 24px 70px rgba(28, 55, 100, 0.14);
+      --shadow-soft: 0 14px 36px rgba(28, 55, 100, 0.10);
+      --radius-xl: 34px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(52, 120, 255, 0.20), transparent 34%),
+        radial-gradient(circle at top right, rgba(82, 214, 255, 0.16), transparent 32%),
+        linear-gradient(180deg, var(--bg-0), #ffffff 42%, #f8fbff 100%);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .page {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 850;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 15px;
+      background:
+        linear-gradient(145deg, #ffffff 0%, #eaf1ff 35%, #3478ff 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.85),
+        0 12px 28px rgba(52, 120, 255, 0.24);
+      position: relative;
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 23px;
+      left: 11px;
+      top: 8px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+    }
+
+    .brand span { font-size: 18px; }
+
+    .top-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      color: var(--text-soft);
+      font-size: 14px;
+      font-weight: 850;
+      box-shadow: 0 10px 28px rgba(28, 55, 100, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .language-switch {
+      display: inline-flex;
+      padding: 5px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 28px rgba(28, 55, 100, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .language-switch button {
+      border: 0;
+      cursor: pointer;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 850;
+      transition: all 180ms ease;
+    }
+
+    .language-switch button.active {
+      color: #ffffff;
+      background: var(--blue);
+      box-shadow: 0 8px 18px rgba(52, 120, 255, 0.28);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.96) 0%, rgba(238,246,255,0.94) 48%, rgba(231,240,255,0.90) 100%);
+      box-shadow: var(--shadow);
+      padding: 46px;
+      margin-bottom: 22px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      right: -130px;
+      top: -140px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(52,120,255,0.25), transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      right: 80px;
+      bottom: -96px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(82,214,255,0.22), transparent 66%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: rgba(52, 120, 255, 0.10);
+      color: var(--blue-dark);
+      font-size: 14px;
+      font-weight: 850;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 0 6px rgba(52,120,255,0.12);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+    }
+
+    .hero-subtitle {
+      margin: 18px 0 0;
+      max-width: 780px;
+      font-size: 18px;
+      color: var(--text-soft);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid var(--line);
+      color: var(--text-soft);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .pill-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 7px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow-soft);
+      padding: 18px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .toc-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 900;
+      margin: 0 0 12px;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--text-soft);
+      font-weight: 750;
+      font-size: 14px;
+      padding: 9px 10px;
+      border-radius: 14px;
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .licenses-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow-soft);
+      padding: 34px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .license-section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .license-section:first-child { padding-top: 0; }
+    .license-section:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 25px;
+      line-height: 1.16;
+      letter-spacing: -0.045em;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      margin: 0 0 13px;
+      color: var(--text-soft);
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 28px;
+      margin: 9px 0;
+      color: var(--text-soft);
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 0 5px rgba(52,120,255,0.10);
+    }
+
+    .note {
+      border-radius: 22px;
+      border: 1px solid rgba(52, 120, 255, 0.18);
+      background:
+        linear-gradient(135deg, rgba(232, 240, 255, 0.92), rgba(255, 255, 255, 0.80));
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+
+    .license-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .license-item {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.76);
+      border-radius: 20px;
+      padding: 16px;
+    }
+
+    .license-item strong {
+      display: block;
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .license-item p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .contact-card {
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at top left, rgba(52,120,255,0.22), transparent 32%),
+        linear-gradient(135deg, #101828, #172554);
+      color: #ffffff;
+      padding: 26px;
+      margin-top: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-card p { color: rgba(255,255,255,0.78); }
+
+    .contact-card a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    strong { color: var(--text); }
+
+    @media (max-width: 920px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: relative; top: 0; }
+      .licenses-card { padding: 28px; }
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 18px 14px 46px; }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .top-actions {
+        width: 100%;
+        justify-content: stretch;
+      }
+
+      .back-link {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .language-switch {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .language-switch button { width: 100%; }
+
+      .hero {
+        padding: 30px 22px;
+        border-radius: 28px;
+      }
+
+      .hero-subtitle { font-size: 16px; }
+
+      .licenses-card {
+        padding: 22px;
+        border-radius: 28px;
+      }
+
+      .toc { border-radius: 24px; }
+
+      .license-grid { grid-template-columns: 1fr; }
+
+      h2 { font-size: 22px; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero,
+      .toc,
+      .licenses-card {
+        animation: rise 520ms ease both;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Scaneris Legal Center">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <span>Scaneris</span>
+      </a>
+
+      <div class="top-actions">
+        <a class="back-link" href="index.html" data-i18n="backHome">← Centre légal</a>
+
+        <div class="language-switch" aria-label="Language selector">
+          <button id="btn-fr" class="active" type="button" onclick="showLanguage('fr')">
+            Français
+          </button>
+          <button id="btn-en" type="button" onclick="showLanguage('en')">
+            English
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span data-i18n="eyebrow">Licences Scaneris</span>
+        </div>
+
+        <h1 data-i18n="heroTitle">Licences open source</h1>
+
+        <p class="hero-subtitle" data-i18n="heroSubtitle">
+          Scaneris utilise des bibliothèques open source et des dépendances techniques pour fournir ses fonctionnalités de scan, PDF, OCR, QR code, partage et traitement local.
+        </p>
+
+        <div class="hero-meta">
+          <span class="pill">
+            <span class="pill-icon">✓</span>
+            <span data-i18n="pillOpen">Open source notices</span>
+          </span>
+          <span class="pill">
+            <span class="pill-icon">✓</span>
+            <span data-i18n="pillFlutter">Flutter / Dart</span>
+          </span>
+          <span class="pill">
+            <span class="pill-icon">✓</span>
+            <span data-i18n="pillUpdated">Mise à jour : 1 mai 2026</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-title" data-i18n="tocTitle">Sommaire</p>
+        <a href="#overview" data-i18n="tocOverview">Vue d’ensemble</a>
+        <a href="#libraries" data-i18n="tocLibraries">Bibliothèques</a>
+        <a href="#categories" data-i18n="tocCategories">Catégories</a>
+        <a href="#notices" data-i18n="tocNotices">Notices</a>
+        <a href="#app" data-i18n="tocApp">Licences dans l’app</a>
+        <a href="#changes" data-i18n="tocChanges">Mises à jour</a>
+        <a href="#contact" data-i18n="tocContact">Contact</a>
+      </nav>
+
+      <article class="licenses-card">
+        <section id="overview" class="license-section">
+          <h2 data-i18n="s1Title">1. Vue d’ensemble</h2>
+          <p data-i18n="s1P1">
+            Scaneris est construit avec Flutter et Dart, ainsi que des bibliothèques techniques open source ou tierces nécessaires au fonctionnement de l’application.
+          </p>
+          <p data-i18n="s1P2">
+            Ces bibliothèques permettent notamment l’accès caméra, l’import de fichiers, le traitement d’images, la génération PDF, l’OCR, la lecture de QR codes, l’ouverture de liens, la protection PDF et le partage via le système.
+          </p>
+          <div class="note">
+            <strong data-i18n="s1NoteTitle">Important</strong>
+            <p data-i18n="s1NoteText">
+              Les bibliothèques listées ici peuvent évoluer avec les versions de Scaneris. Les notices exactes et complètes des dépendances doivent également être consultables dans l’application via l’écran de licences lorsque celui-ci est disponible.
+            </p>
+          </div>
+        </section>
+
+        <section id="libraries" class="license-section">
+          <h2 data-i18n="s2Title">2. Bibliothèques et dépendances utilisées</h2>
+          <p data-i18n="s2P1">
+            Scaneris peut utiliser notamment les bibliothèques ou familles de bibliothèques suivantes, selon la version installée :
+          </p>
+
+          <div class="license-grid">
+            <div class="license-item">
+              <strong>Flutter / Dart</strong>
+              <p data-i18n="libFlutter">Framework et langage principaux de l’application.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>camera</strong>
+              <p data-i18n="libCamera">Prévisualisation caméra et capture de documents.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>image_picker</strong>
+              <p data-i18n="libImagePicker">Import d’images depuis l’appareil.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>file_picker</strong>
+              <p data-i18n="libFilePicker">Sélection de fichiers PDF ou documents compatibles.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>path_provider</strong>
+              <p data-i18n="libPathProvider">Accès aux emplacements de stockage local et temporaire.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>pdf</strong>
+              <p data-i18n="libPdf">Création et génération de documents PDF.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>pdfx</strong>
+              <p data-i18n="libPdfx">Lecture ou rendu de documents PDF.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>image</strong>
+              <p data-i18n="libImage">Traitement d’images, compression et conversion.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>google_mlkit_text_recognition</strong>
+              <p data-i18n="libMlKit">Extraction de texte par OCR sur l’appareil.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>mobile_scanner</strong>
+              <p data-i18n="libMobileScanner">Lecture de QR codes et codes-barres avec la caméra.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>qr_flutter</strong>
+              <p data-i18n="libQrFlutter">Génération visuelle de QR codes.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>share_plus</strong>
+              <p data-i18n="libSharePlus">Partage de fichiers et contenus via les options système.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>url_launcher</strong>
+              <p data-i18n="libUrlLauncher">Ouverture de liens via un navigateur ou une application externe.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>cunning_document_scanner</strong>
+              <p data-i18n="libScanner">Aide au scan automatique de documents.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>ares_defence_labs_lock_smith_pdf</strong>
+              <p data-i18n="libLocksmith">Protection de fichiers PDF par mot de passe.</p>
+            </div>
+
+            <div class="license-item">
+              <strong>flutter_localizations</strong>
+              <p data-i18n="libLocalizations">Gestion des langues et localisations de l’application.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="categories" class="license-section">
+          <h2 data-i18n="s3Title">3. Rôle des dépendances</h2>
+          <p data-i18n="s3P1">
+            Les dépendances techniques de Scaneris sont utilisées pour fournir des fonctions précises :
+          </p>
+          <ul>
+            <li data-i18n="s3Li1">scan et capture de documents ;</li>
+            <li data-i18n="s3Li2">import d’images et de fichiers ;</li>
+            <li data-i18n="s3Li3">stockage local et fichiers temporaires ;</li>
+            <li data-i18n="s3Li4">génération, lecture, protection et transformation de PDF ;</li>
+            <li data-i18n="s3Li5">traitement d’images et compression ;</li>
+            <li data-i18n="s3Li6">OCR et extraction de texte ;</li>
+            <li data-i18n="s3Li7">création et lecture de QR codes ;</li>
+            <li data-i18n="s3Li8">partage système et ouverture de liens externes ;</li>
+            <li data-i18n="s3Li9">traductions et interface multilingue.</li>
+          </ul>
+        </section>
+
+        <section id="notices" class="license-section">
+          <h2 data-i18n="s4Title">4. Notices et licences applicables</h2>
+          <p data-i18n="s4P1">
+            Chaque bibliothèque reste soumise à sa propre licence open source ou licence de distribution. Scaneris ne revendique pas la propriété de ces bibliothèques.
+          </p>
+          <p data-i18n="s4P2">
+            Les noms de bibliothèques, marques ou technologies mentionnés appartiennent à leurs propriétaires respectifs.
+          </p>
+          <p data-i18n="s4P3">
+            Lorsque requis, les notices de copyright, licences et conditions propres aux dépendances doivent être respectées conformément aux licences fournies par leurs auteurs.
+          </p>
+        </section>
+
+        <section id="app" class="license-section">
+          <h2 data-i18n="s5Title">5. Consultation des licences dans l’application</h2>
+          <p data-i18n="s5P1">
+            Une section “Licences open source” peut être ajoutée dans les réglages de Scaneris afin d’afficher les licences détaillées générées par Flutter et les packages utilisés.
+          </p>
+          <p data-i18n="s5P2">
+            En cas de différence entre cette page publique et les notices générées directement par l’application ou les packages, les notices officielles des bibliothèques concernées prévalent.
+          </p>
+        </section>
+
+        <section id="changes" class="license-section">
+          <h2 data-i18n="s6Title">6. Mises à jour</h2>
+          <p data-i18n="s6P1">
+            Cette page peut être mise à jour lorsque Scaneris ajoute, retire ou remplace des dépendances techniques.
+          </p>
+          <p data-i18n="s6P2">
+            Les dépendances exactes peuvent varier selon la version de l’application, la plateforme, Android, iOS et les fonctionnalités activées.
+          </p>
+          <p class="legal-muted" data-i18n="s6P3">
+            Dernière mise à jour : 1 mai 2026.
+          </p>
+        </section>
+
+        <section id="contact" class="license-section">
+          <div class="contact-card">
+            <h2 data-i18n="contactTitle">Contact</h2>
+            <p data-i18n="contactText">
+              Pour toute question concernant les licences open source ou les dépendances utilisées par Scaneris, vous pouvez contacter le support.
+            </p>
+            <p>
+              <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
+            </p>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">
+      <p data-i18n="footerText">© 2026 Scaneris. Tous droits réservés.</p>
+    </footer>
+  </main>
+
+  <script>
+    const translations = {
+      fr: {
+        backHome: "← Centre légal",
+        eyebrow: "Licences Scaneris",
+        heroTitle: "Licences open source",
+        heroSubtitle: "Scaneris utilise des bibliothèques open source et des dépendances techniques pour fournir ses fonctionnalités de scan, PDF, OCR, QR code, partage et traitement local.",
+        pillOpen: "Open source notices",
+        pillFlutter: "Flutter / Dart",
+        pillUpdated: "Mise à jour : 1 mai 2026",
+
+        tocTitle: "Sommaire",
+        tocOverview: "Vue d’ensemble",
+        tocLibraries: "Bibliothèques",
+        tocCategories: "Catégories",
+        tocNotices: "Notices",
+        tocApp: "Licences dans l’app",
+        tocChanges: "Mises à jour",
+        tocContact: "Contact",
+
+        s1Title: "1. Vue d’ensemble",
+        s1P1: "Scaneris est construit avec Flutter et Dart, ainsi que des bibliothèques techniques open source ou tierces nécessaires au fonctionnement de l’application.",
+        s1P2: "Ces bibliothèques permettent notamment l’accès caméra, l’import de fichiers, le traitement d’images, la génération PDF, l’OCR, la lecture de QR codes, l’ouverture de liens, la protection PDF et le partage via le système.",
+        s1NoteTitle: "Important",
+        s1NoteText: "Les bibliothèques listées ici peuvent évoluer avec les versions de Scaneris. Les notices exactes et complètes des dépendances doivent également être consultables dans l’application via l’écran de licences lorsque celui-ci est disponible.",
+
+        s2Title: "2. Bibliothèques et dépendances utilisées",
+        s2P1: "Scaneris peut utiliser notamment les bibliothèques ou familles de bibliothèques suivantes, selon la version installée :",
+
+        libFlutter: "Framework et langage principaux de l’application.",
+        libCamera: "Prévisualisation caméra et capture de documents.",
+        libImagePicker: "Import d’images depuis l’appareil.",
+        libFilePicker: "Sélection de fichiers PDF ou documents compatibles.",
+        libPathProvider: "Accès aux emplacements de stockage local et temporaire.",
+        libPdf: "Création et génération de documents PDF.",
+        libPdfx: "Lecture ou rendu de documents PDF.",
+        libImage: "Traitement d’images, compression et conversion.",
+        libMlKit: "Extraction de texte par OCR sur l’appareil.",
+        libMobileScanner: "Lecture de QR codes et codes-barres avec la caméra.",
+        libQrFlutter: "Génération visuelle de QR codes.",
+        libSharePlus: "Partage de fichiers et contenus via les options système.",
+        libUrlLauncher: "Ouverture de liens via un navigateur ou une application externe.",
+        libScanner: "Aide au scan automatique de documents.",
+        libLocksmith: "Protection de fichiers PDF par mot de passe.",
+        libLocalizations: "Gestion des langues et localisations de l’application.",
+
+        s3Title: "3. Rôle des dépendances",
+        s3P1: "Les dépendances techniques de Scaneris sont utilisées pour fournir des fonctions précises :",
+        s3Li1: "scan et capture de documents ;",
+        s3Li2: "import d’images et de fichiers ;",
+        s3Li3: "stockage local et fichiers temporaires ;",
+        s3Li4: "génération, lecture, protection et transformation de PDF ;",
+        s3Li5: "traitement d’images et compression ;",
+        s3Li6: "OCR et extraction de texte ;",
+        s3Li7: "création et lecture de QR codes ;",
+        s3Li8: "partage système et ouverture de liens externes ;",
+        s3Li9: "traductions et interface multilingue.",
+
+        s4Title: "4. Notices et licences applicables",
+        s4P1: "Chaque bibliothèque reste soumise à sa propre licence open source ou licence de distribution. Scaneris ne revendique pas la propriété de ces bibliothèques.",
+        s4P2: "Les noms de bibliothèques, marques ou technologies mentionnés appartiennent à leurs propriétaires respectifs.",
+        s4P3: "Lorsque requis, les notices de copyright, licences et conditions propres aux dépendances doivent être respectées conformément aux licences fournies par leurs auteurs.",
+
+        s5Title: "5. Consultation des licences dans l’application",
+        s5P1: "Une section “Licences open source” peut être ajoutée dans les réglages de Scaneris afin d’afficher les licences détaillées générées par Flutter et les packages utilisés.",
+        s5P2: "En cas de différence entre cette page publique et les notices générées directement par l’application ou les packages, les notices officielles des bibliothèques concernées prévalent.",
+
+        s6Title: "6. Mises à jour",
+        s6P1: "Cette page peut être mise à jour lorsque Scaneris ajoute, retire ou remplace des dépendances techniques.",
+        s6P2: "Les dépendances exactes peuvent varier selon la version de l’application, la plateforme, Android, iOS et les fonctionnalités activées.",
+        s6P3: "Dernière mise à jour : 1 mai 2026.",
+
+        contactTitle: "Contact",
+        contactText: "Pour toute question concernant les licences open source ou les dépendances utilisées par Scaneris, vous pouvez contacter le support.",
+        footerText: "© 2026 Scaneris. Tous droits réservés."
+      },
+
+      en: {
+        backHome: "← Legal Center",
+        eyebrow: "Scaneris Licenses",
+        heroTitle: "Open Source Licenses",
+        heroSubtitle: "Scaneris uses open source libraries and technical dependencies to provide scanning, PDF, OCR, QR code, sharing and local processing features.",
+        pillOpen: "Open source notices",
+        pillFlutter: "Flutter / Dart",
+        pillUpdated: "Updated: May 1, 2026",
+
+        tocTitle: "Contents",
+        tocOverview: "Overview",
+        tocLibraries: "Libraries",
+        tocCategories: "Categories",
+        tocNotices: "Notices",
+        tocApp: "In-app licenses",
+        tocChanges: "Updates",
+        tocContact: "Contact",
+
+        s1Title: "1. Overview",
+        s1P1: "Scaneris is built with Flutter and Dart, as well as open source or third-party technical libraries required for the app to work.",
+        s1P2: "These libraries enable features such as camera access, file import, image processing, PDF generation, OCR, QR code scanning, link opening, PDF protection and system sharing.",
+        s1NoteTitle: "Important",
+        s1NoteText: "The libraries listed here may change with Scaneris versions. The exact and complete dependency notices should also be available in the app through the license screen when it is available.",
+
+        s2Title: "2. Libraries and dependencies used",
+        s2P1: "Scaneris may use the following libraries or library families, depending on the installed version:",
+
+        libFlutter: "Main framework and programming language of the app.",
+        libCamera: "Camera preview and document capture.",
+        libImagePicker: "Image import from the device.",
+        libFilePicker: "PDF or compatible document file selection.",
+        libPathProvider: "Access to local and temporary storage locations.",
+        libPdf: "PDF document creation and generation.",
+        libPdfx: "PDF document reading or rendering.",
+        libImage: "Image processing, compression and conversion.",
+        libMlKit: "On-device OCR text extraction.",
+        libMobileScanner: "QR code and barcode scanning with the camera.",
+        libQrFlutter: "Visual QR code generation.",
+        libSharePlus: "Sharing files and content through system options.",
+        libUrlLauncher: "Opening links through a browser or external app.",
+        libScanner: "Assistance for automatic document scanning.",
+        libLocksmith: "Password protection for PDF files.",
+        libLocalizations: "Language and localization support for the app.",
+
+        s3Title: "3. Role of dependencies",
+        s3P1: "Scaneris technical dependencies are used to provide specific features:",
+        s3Li1: "document scanning and capture;",
+        s3Li2: "image and file import;",
+        s3Li3: "local storage and temporary files;",
+        s3Li4: "PDF generation, reading, protection and transformation;",
+        s3Li5: "image processing and compression;",
+        s3Li6: "OCR and text extraction;",
+        s3Li7: "QR code creation and scanning;",
+        s3Li8: "system sharing and opening external links;",
+        s3Li9: "translations and multilingual interface.",
+
+        s4Title: "4. Applicable notices and licenses",
+        s4P1: "Each library remains subject to its own open source license or distribution license. Scaneris does not claim ownership of these libraries.",
+        s4P2: "Library names, trademarks or technologies mentioned belong to their respective owners.",
+        s4P3: "Where required, copyright notices, licenses and dependency-specific terms must be respected according to the licenses provided by their authors.",
+
+        s5Title: "5. Viewing licenses in the app",
+        s5P1: "An “Open Source Licenses” section may be added in Scaneris settings to display detailed licenses generated by Flutter and the packages used.",
+        s5P2: "If there is any difference between this public page and the notices generated directly by the app or packages, the official notices of the relevant libraries prevail.",
+
+        s6Title: "6. Updates",
+        s6P1: "This page may be updated when Scaneris adds, removes or replaces technical dependencies.",
+        s6P2: "Exact dependencies may vary depending on the app version, platform, Android, iOS and enabled features.",
+        s6P3: "Last updated: May 1, 2026.",
+
+        contactTitle: "Contact",
+        contactText: "For any question about open source licenses or dependencies used by Scaneris, you can contact support.",
+        footerText: "© 2026 Scaneris. All rights reserved."
+      }
+    };
+
+    function showLanguage(lang) {
+      const selected = translations[lang] ? lang : "fr";
+      document.documentElement.lang = selected;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (translations[selected][key]) {
+          element.textContent = translations[selected][key];
+        }
+      });
+
+      document.getElementById("btn-fr").classList.toggle("active", selected === "fr");
+      document.getElementById("btn-en").classList.toggle("active", selected === "en");
+
+      try {
+        localStorage.setItem("scaneris_licenses_lang", selected);
+      } catch (_) {}
+    }
+
+    (function initLanguage() {
+      let saved = null;
+
+      try {
+        saved = localStorage.getItem("scaneris_licenses_lang");
+      } catch (_) {}
+
+      const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("en")
+        ? "en"
+        : "fr";
+
+      showLanguage(saved || browserLang);
+    })();
+  </script>
+</body>
+</html>
