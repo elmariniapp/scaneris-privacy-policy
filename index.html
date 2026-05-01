@@ -3,26 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scaneris — Politique de confidentialité / Privacy Policy</title>
+  <title>Scaneris — Legal Center / Centre légal</title>
   <meta
     name="description"
-    content="Politique de confidentialité de Scaneris — Scaneris Privacy Policy"
+    content="Scaneris Legal Center — Privacy Policy, Terms of Use, Support and Open Source Licenses."
   />
 
   <style>
     :root {
-      --bg-0: #f5f8ff;
-      --bg-1: #eef4ff;
-      --bg-2: #ffffff;
+      --bg: #f5f8ff;
+      --surface: rgba(255, 255, 255, 0.86);
+      --surface-strong: #ffffff;
       --text: #101828;
-      --text-soft: #475467;
       --muted: #667085;
+      --soft: #475467;
       --line: rgba(16, 24, 40, 0.10);
-      --line-strong: rgba(16, 24, 40, 0.16);
       --blue: #3478ff;
-      --blue-2: #1d63f0;
+      --blue-dark: #1d63f0;
       --blue-soft: #e8f0ff;
-      --cyan-soft: #e8fbff;
       --green-soft: #eafaf1;
       --purple-soft: #f1ecff;
       --orange-soft: #fff2e6;
@@ -30,7 +28,6 @@
       --shadow-soft: 0 14px 36px rgba(28, 55, 100, 0.10);
       --radius-xl: 34px;
       --radius-lg: 26px;
-      --radius-md: 18px;
       --max: 1120px;
     }
 
@@ -38,17 +35,14 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
+      min-height: 100vh;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(52, 120, 255, 0.20), transparent 34%),
-        radial-gradient(circle at top right, rgba(82, 214, 255, 0.16), transparent 32%),
-        linear-gradient(180deg, var(--bg-0), #ffffff 42%, #f8fbff 100%);
+        radial-gradient(circle at top left, rgba(52, 120, 255, 0.22), transparent 34%),
+        radial-gradient(circle at top right, rgba(64, 214, 255, 0.16), transparent 32%),
+        linear-gradient(180deg, #f5f8ff 0%, #ffffff 45%, #f8fbff 100%);
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -59,23 +53,17 @@
         Helvetica,
         Arial,
         sans-serif;
-      line-height: 1.68;
+      line-height: 1.62;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
     a {
-      color: var(--blue);
-      font-weight: 700;
+      color: inherit;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
     .page {
-      width: 100%;
       max-width: var(--max);
       margin: 0 auto;
       padding: 28px 18px 64px;
@@ -93,30 +81,30 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      font-weight: 800;
+      font-weight: 850;
       letter-spacing: -0.03em;
-      color: var(--text);
     }
 
     .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 15px;
       background:
         linear-gradient(145deg, #ffffff 0%, #eaf1ff 35%, #3478ff 100%);
       box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.8),
+        inset 0 1px 0 rgba(255,255,255,0.85),
         0 12px 28px rgba(52, 120, 255, 0.24);
       position: relative;
       overflow: hidden;
+      flex: 0 0 auto;
     }
 
     .brand-mark::after {
       content: "";
       position: absolute;
-      width: 17px;
-      height: 22px;
-      left: 10px;
+      width: 18px;
+      height: 23px;
+      left: 11px;
       top: 8px;
       border-radius: 5px;
       background: rgba(255, 255, 255, 0.92);
@@ -131,7 +119,7 @@
       display: inline-flex;
       padding: 5px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.76);
+      background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--line);
       box-shadow: 0 10px 28px rgba(28, 55, 100, 0.08);
       backdrop-filter: blur(18px);
@@ -146,7 +134,7 @@
       background: transparent;
       color: var(--muted);
       font-size: 14px;
-      font-weight: 800;
+      font-weight: 850;
       transition: all 180ms ease;
     }
 
@@ -159,43 +147,43 @@
     .hero {
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.72);
       border-radius: var(--radius-xl);
+      border: 1px solid rgba(255, 255, 255, 0.72);
       background:
-        linear-gradient(135deg, rgba(255,255,255,0.94) 0%, rgba(238,246,255,0.92) 48%, rgba(231,240,255,0.90) 100%);
+        linear-gradient(135deg, rgba(255,255,255,0.96) 0%, rgba(238,246,255,0.94) 50%, rgba(231,240,255,0.90) 100%);
       box-shadow: var(--shadow);
-      padding: 44px;
+      padding: 46px;
       margin-bottom: 22px;
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      width: 360px;
-      height: 360px;
-      right: -120px;
-      top: -130px;
+      width: 380px;
+      height: 380px;
+      right: -130px;
+      top: -140px;
       border-radius: 999px;
-      background: radial-gradient(circle, rgba(52,120,255,0.26), transparent 68%);
+      background: radial-gradient(circle, rgba(52,120,255,0.25), transparent 68%);
       pointer-events: none;
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      width: 190px;
-      height: 190px;
-      right: 72px;
-      bottom: -84px;
+      width: 210px;
+      height: 210px;
+      right: 80px;
+      bottom: -96px;
       border-radius: 999px;
-      background: radial-gradient(circle, rgba(52,214,255,0.22), transparent 66%);
+      background: radial-gradient(circle, rgba(82,214,255,0.22), transparent 66%);
       pointer-events: none;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 780px;
+      max-width: 820px;
     }
 
     .eyebrow {
@@ -205,7 +193,7 @@
       padding: 9px 13px;
       border-radius: 999px;
       background: rgba(52, 120, 255, 0.10);
-      color: var(--blue-2);
+      color: var(--blue-dark);
       font-size: 14px;
       font-weight: 850;
       margin-bottom: 18px;
@@ -221,40 +209,39 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(38px, 6vw, 68px);
+      font-size: clamp(42px, 6vw, 72px);
       line-height: 0.98;
-      letter-spacing: -0.07em;
-      color: var(--text);
+      letter-spacing: -0.075em;
     }
 
-    .hero-subtitle {
-      margin: 18px 0 0;
-      max-width: 760px;
+    .subtitle {
+      margin: 20px 0 0;
+      max-width: 770px;
+      color: var(--soft);
       font-size: 18px;
-      color: var(--text-soft);
     }
 
-    .hero-meta {
+    .badges {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 24px;
+      margin-top: 26px;
     }
 
-    .pill {
+    .badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 10px 13px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
+      background: rgba(255, 255, 255, 0.74);
       border: 1px solid var(--line);
-      color: var(--text-soft);
+      color: var(--soft);
       font-size: 14px;
       font-weight: 750;
     }
 
-    .pill-icon {
+    .badge-icon {
       width: 18px;
       height: 18px;
       display: inline-grid;
@@ -266,273 +253,166 @@
       font-weight: 900;
     }
 
-    .summary-grid {
+    .cards-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      margin: 22px 0;
+      gap: 16px;
+      margin-top: 22px;
     }
 
-    .summary-card {
-      background: rgba(255, 255, 255, 0.84);
+    .legal-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 250px;
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 18px;
       box-shadow: var(--shadow-soft);
+      overflow: hidden;
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
     }
 
-    .summary-card strong {
-      display: block;
-      font-size: 15px;
-      letter-spacing: -0.02em;
-      margin-bottom: 5px;
+    .legal-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 56px rgba(28, 55, 100, 0.16);
+      border-color: rgba(52, 120, 255, 0.24);
     }
 
-    .summary-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.45;
+    .legal-card::after {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      right: -54px;
+      top: -54px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(52,120,255,0.16), transparent 70%);
     }
 
-    .summary-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 14px;
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 18px;
       display: grid;
       place-items: center;
-      margin-bottom: 12px;
-      font-weight: 900;
+      margin-bottom: 18px;
       color: var(--blue);
       background: var(--blue-soft);
+      font-size: 22px;
+      font-weight: 900;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
     }
 
-    .summary-card:nth-child(2) .summary-icon {
-      background: var(--green-soft);
-      color: #0f9f5d;
-    }
-
-    .summary-card:nth-child(3) .summary-icon {
+    .legal-card:nth-child(2) .icon {
       background: var(--purple-soft);
       color: #7447e8;
     }
 
-    .summary-card:nth-child(4) .summary-icon {
+    .legal-card:nth-child(3) .icon {
+      background: var(--green-soft);
+      color: #0f9f5d;
+    }
+
+    .legal-card:nth-child(4) .icon {
       background: var(--orange-soft);
       color: #d97706;
     }
 
-    .layout {
-      display: grid;
-      grid-template-columns: 280px minmax(0, 1fr);
-      gap: 22px;
-      align-items: start;
-    }
-
-    .toc {
-      position: sticky;
-      top: 18px;
-      border-radius: 26px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.78);
-      box-shadow: var(--shadow-soft);
-      padding: 18px;
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-    }
-
-    .toc-title {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      font-weight: 900;
-      margin: 0 0 12px;
-    }
-
-    .toc a {
-      display: block;
-      color: var(--text-soft);
-      font-weight: 750;
-      font-size: 14px;
-      padding: 9px 10px;
-      border-radius: 14px;
-      text-decoration: none;
-    }
-
-    .toc a:hover {
-      background: var(--blue-soft);
-      color: var(--blue);
-    }
-
-    .policy-card {
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.88);
-      box-shadow: var(--shadow-soft);
-      padding: 34px;
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-    }
-
-    .policy-section {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .policy-section:first-child {
-      padding-top: 0;
-    }
-
-    .policy-section:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 25px;
-      line-height: 1.16;
+    .legal-card h2 {
+      margin: 0 0 8px;
+      font-size: 21px;
+      line-height: 1.12;
       letter-spacing: -0.045em;
     }
 
-    h3 {
-      margin: 22px 0 8px;
-      font-size: 18px;
-      letter-spacing: -0.025em;
-    }
-
-    p {
-      margin: 0 0 13px;
-      color: var(--text-soft);
-    }
-
-    ul {
-      margin: 10px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    li {
-      position: relative;
-      padding-left: 28px;
-      margin: 9px 0;
-      color: var(--text-soft);
-    }
-
-    li::before {
-      content: "";
-      position: absolute;
-      left: 4px;
-      top: 0.72em;
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--blue);
-      box-shadow: 0 0 0 5px rgba(52,120,255,0.10);
-    }
-
-    .note {
-      border-radius: 22px;
-      border: 1px solid rgba(52, 120, 255, 0.18);
-      background:
-        linear-gradient(135deg, rgba(232, 240, 255, 0.92), rgba(255, 255, 255, 0.80));
-      padding: 18px;
-      margin-top: 18px;
-    }
-
-    .note strong {
-      display: block;
-      margin-bottom: 5px;
-      color: var(--text);
-    }
-
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .mini-card {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.76);
-      border-radius: 20px;
-      padding: 16px;
-    }
-
-    .mini-card strong {
-      display: block;
-      margin-bottom: 6px;
-      letter-spacing: -0.02em;
-    }
-
-    .mini-card p {
+    .legal-card p {
       margin: 0;
-      font-size: 14px;
+      color: var(--muted);
+      font-size: 15px;
       line-height: 1.5;
     }
 
-    .contact-card {
-      border-radius: 26px;
+    .card-footer {
+      margin-top: auto;
+      padding-top: 20px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 850;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .info-panel {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .panel {
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      padding: 24px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .panel h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.18;
+      letter-spacing: -0.045em;
+    }
+
+    .panel p {
+      margin: 0 0 12px;
+      color: var(--soft);
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact {
       background:
         radial-gradient(circle at top left, rgba(52,120,255,0.22), transparent 32%),
         linear-gradient(135deg, #101828, #172554);
       color: #ffffff;
-      padding: 26px;
-      margin-top: 24px;
-      overflow: hidden;
-      position: relative;
+      border: 0;
     }
 
-    .contact-card p {
+    .contact p {
       color: rgba(255,255,255,0.78);
     }
 
-    .contact-card a {
+    .contact a {
       color: #ffffff;
       text-decoration: underline;
       text-underline-offset: 4px;
+      font-weight: 850;
     }
 
     .footer {
       text-align: center;
       color: var(--muted);
       font-size: 14px;
-      margin-top: 30px;
+      margin-top: 32px;
     }
 
-    .hidden {
-      display: none;
-    }
-
-    .legal-muted {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    strong {
-      color: var(--text);
-    }
-
-    @media (max-width: 920px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-
-      .toc {
-        position: relative;
-        top: 0;
-      }
-
-      .summary-grid {
+    @media (max-width: 980px) {
+      .cards-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .policy-card {
-        padding: 28px;
+      .info-panel {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -557,44 +437,33 @@
       }
 
       .hero {
-        padding: 28px 22px;
+        padding: 30px 22px;
         border-radius: 28px;
       }
 
-      .hero-subtitle {
+      .subtitle {
         font-size: 16px;
       }
 
-      .summary-grid,
-      .mini-grid {
+      .cards-grid {
         grid-template-columns: 1fr;
       }
 
-      .policy-card {
-        padding: 22px;
-        border-radius: 28px;
-      }
-
-      .toc {
-        border-radius: 24px;
-      }
-
-      h2 {
-        font-size: 22px;
+      .legal-card {
+        min-height: 220px;
       }
     }
 
     @media (prefers-reduced-motion: no-preference) {
       .hero,
-      .summary-card,
-      .toc,
-      .policy-card {
+      .legal-card,
+      .panel {
         animation: rise 520ms ease both;
       }
 
-      .summary-card:nth-child(2) { animation-delay: 60ms; }
-      .summary-card:nth-child(3) { animation-delay: 110ms; }
-      .summary-card:nth-child(4) { animation-delay: 160ms; }
+      .legal-card:nth-child(2) { animation-delay: 60ms; }
+      .legal-card:nth-child(3) { animation-delay: 110ms; }
+      .legal-card:nth-child(4) { animation-delay: 160ms; }
 
       @keyframes rise {
         from {
@@ -632,273 +501,91 @@
       <div class="hero-content">
         <div class="eyebrow">
           <span class="eyebrow-dot" aria-hidden="true"></span>
-          <span data-i18n="eyebrow">Local-first • Documents • PDF • OCR</span>
+          <span data-i18n="eyebrow">Centre légal Scaneris</span>
         </div>
 
-        <h1 data-i18n="heroTitle">Politique de confidentialité</h1>
+        <h1 data-i18n="heroTitle">Documents légaux et support</h1>
 
-        <p class="hero-subtitle" data-i18n="heroSubtitle">
-          Scaneris est conçu pour scanner, organiser, transformer et partager vos documents avec une approche locale : pas de compte obligatoire, pas de synchronisation cloud automatique et aucun suivi publicitaire intégré dans l’application.
+        <p class="subtitle" data-i18n="heroSubtitle">
+          Retrouvez les informations officielles de Scaneris : confidentialité, conditions d’utilisation, support et licences open source.
         </p>
 
-        <div class="hero-meta">
-          <span class="pill">
-            <span class="pill-icon">✓</span>
-            <span data-i18n="pillLocal">Traitement local</span>
+        <div class="badges">
+          <span class="badge">
+            <span class="badge-icon">✓</span>
+            <span data-i18n="badgeLocal">Application local-first</span>
           </span>
-          <span class="pill">
-            <span class="pill-icon">✓</span>
-            <span data-i18n="pillNoAccount">Aucun compte requis</span>
+          <span class="badge">
+            <span class="badge-icon">✓</span>
+            <span data-i18n="badgeNoAccount">Aucun compte requis</span>
           </span>
-          <span class="pill">
-            <span class="pill-icon">✓</span>
-            <span data-i18n="pillNoCloud">Pas de cloud automatique</span>
-          </span>
-          <span class="pill">
-            <span class="pill-icon">✓</span>
-            <span data-i18n="pillUpdated">Mise à jour : 1 mai 2026</span>
+          <span class="badge">
+            <span class="badge-icon">✓</span>
+            <span data-i18n="badgeNoCloud">Pas de cloud automatique</span>
           </span>
         </div>
       </div>
     </section>
 
-    <section class="summary-grid" aria-label="Privacy highlights">
-      <article class="summary-card">
-        <div class="summary-icon">1</div>
-        <strong data-i18n="summary1Title">Vos documents restent sur l’appareil</strong>
-        <p data-i18n="summary1Text">
-          Les scans, images, PDF, dossiers et préférences sont principalement stockés localement.
+    <section class="cards-grid" aria-label="Legal pages">
+      <a class="legal-card" href="privacy.html">
+        <div class="icon">↗</div>
+        <h2 data-i18n="privacyTitle">Politique de confidentialité</h2>
+        <p data-i18n="privacyText">
+          Données traitées, permissions, stockage local, OCR, partage, sécurité et documents sensibles.
+        </p>
+        <span class="card-footer" data-i18n="openPage">Ouvrir la page →</span>
+      </a>
+
+      <a class="legal-card" href="terms.html">
+        <div class="icon">§</div>
+        <h2 data-i18n="termsTitle">Conditions d’utilisation</h2>
+        <p data-i18n="termsText">
+          Règles d’usage de Scaneris, limites de responsabilité, documents sensibles et fonctionnalités PDF.
+        </p>
+        <span class="card-footer" data-i18n="openPage2">Ouvrir la page →</span>
+      </a>
+
+      <a class="legal-card" href="support.html">
+        <div class="icon">?</div>
+        <h2 data-i18n="supportTitle">Support</h2>
+        <p data-i18n="supportText">
+          Aide, contact, questions fréquentes et informations pour signaler un problème.
+        </p>
+        <span class="card-footer" data-i18n="openPage3">Ouvrir la page →</span>
+      </a>
+
+      <a class="legal-card" href="licenses.html">
+        <div class="icon">⌘</div>
+        <h2 data-i18n="licensesTitle">Licences open source</h2>
+        <p data-i18n="licensesText">
+          Informations sur les bibliothèques techniques, dépendances et notices open source.
+        </p>
+        <span class="card-footer" data-i18n="openPage4">Ouvrir la page →</span>
+      </a>
+    </section>
+
+    <section class="info-panel">
+      <article class="panel">
+        <h2 data-i18n="aboutTitle">À propos de Scaneris</h2>
+        <p data-i18n="aboutP1">
+          Scaneris est une application de scan de documents et d’outils PDF pensée pour fonctionner principalement sur l’appareil.
+        </p>
+        <p data-i18n="aboutP2">
+          Elle permet de scanner, organiser, transformer et partager des documents sans compte obligatoire ni synchronisation cloud automatique.
         </p>
       </article>
 
-      <article class="summary-card">
-        <div class="summary-icon">2</div>
-        <strong data-i18n="summary2Title">Partage contrôlé par l’utilisateur</strong>
-        <p data-i18n="summary2Text">
-          Les fichiers quittent Scaneris uniquement lorsque vous utilisez une action de partage ou d’export.
+      <article class="panel contact">
+        <h2 data-i18n="contactTitle">Contact</h2>
+        <p data-i18n="contactText">
+          Pour toute question concernant Scaneris ou ces documents, contactez le support.
         </p>
-      </article>
-
-      <article class="summary-card">
-        <div class="summary-icon">3</div>
-        <strong data-i18n="summary3Title">OCR et outils PDF locaux</strong>
-        <p data-i18n="summary3Text">
-          L’extraction de texte et les traitements PDF sont conçus pour fonctionner sur l’appareil.
-        </p>
-      </article>
-
-      <article class="summary-card">
-        <div class="summary-icon">4</div>
-        <strong data-i18n="summary4Title">Pas de promesse juridique</strong>
-        <p data-i18n="summary4Text">
-          Scaneris ne fournit pas de vérification officielle d’identité, de KYC ou de certification légale.
+        <p>
+          <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
         </p>
       </article>
     </section>
-
-    <div class="layout">
-      <nav class="toc" aria-label="Table of contents">
-        <p class="toc-title" data-i18n="tocTitle">Sommaire</p>
-        <a href="#overview" data-i18n="tocOverview">Vue d’ensemble</a>
-        <a href="#data" data-i18n="tocData">Données traitées</a>
-        <a href="#storage" data-i18n="tocStorage">Stockage local</a>
-        <a href="#features" data-i18n="tocFeatures">Fonctionnalités</a>
-        <a href="#permissions" data-i18n="tocPermissions">Permissions</a>
-        <a href="#sharing" data-i18n="tocSharing">Partage & apps tierces</a>
-        <a href="#security" data-i18n="tocSecurity">Sécurité & suppression</a>
-        <a href="#thirdparty" data-i18n="tocThirdParty">Dépendances techniques</a>
-        <a href="#contact" data-i18n="tocContact">Contact</a>
-      </nav>
-
-      <article class="policy-card">
-        <section id="overview" class="policy-section">
-          <h2 data-i18n="s1Title">1. Vue d’ensemble</h2>
-          <p data-i18n="s1P1">
-            Scaneris est une application de scan de documents, d’organisation locale et d’outils PDF. Elle permet notamment de scanner des documents, importer des images ou PDF, générer des PDF, extraire du texte par OCR, créer ou lire des QR codes, ajouter un filigrane, protéger un PDF par mot de passe, diviser ou fusionner des PDF et apposer une signature visuelle.
-          </p>
-          <p data-i18n="s1P2">
-            L’application est conçue avec une approche local-first : les documents sont traités principalement sur votre appareil. Scaneris ne nécessite pas de compte utilisateur, ne propose pas de synchronisation cloud automatique et ne contient pas de système publicitaire ou d’analytics intégré dans le code audité.
-          </p>
-          <div class="note">
-            <strong data-i18n="s1NoteTitle">Point important</strong>
-            <p data-i18n="s1NoteText">
-              Lorsque vous partagez ou exportez un document vers une autre application, le fichier est transmis à l’application ou au service que vous choisissez. À partir de ce moment, le traitement dépend de ce service tiers.
-            </p>
-          </div>
-        </section>
-
-        <section id="data" class="policy-section">
-          <h2 data-i18n="s2Title">2. Données pouvant être traitées</h2>
-          <p data-i18n="s2P1">
-            Selon les fonctionnalités que vous utilisez, Scaneris peut traiter les catégories de données suivantes :
-          </p>
-          <ul>
-            <li data-i18n="s2Li1">photos ou scans de documents capturés avec la caméra ;</li>
-            <li data-i18n="s2Li2">images importées depuis votre appareil ;</li>
-            <li data-i18n="s2Li3">fichiers PDF importés, générés, fusionnés, divisés, compressés, protégés ou filigranés ;</li>
-            <li data-i18n="s2Li4">texte extrait localement par OCR ;</li>
-            <li data-i18n="s2Li5">contenu de QR codes créés ou scannés ;</li>
-            <li data-i18n="s2Li6">signature visuelle dessinée dans l’application, stockée sous forme de points normalisés ;</li>
-            <li data-i18n="s2Li7">métadonnées locales comme les titres de documents, dates, favoris, dossiers et nombre de pages ;</li>
-            <li data-i18n="s2Li8">préférences locales, comme les réglages de scan, grille, flash, son ou scan automatique.</li>
-          </ul>
-          <p data-i18n="s2P2">
-            Scaneris peut être utilisé avec des documents personnels ou sensibles. Vous restez responsable des documents que vous scannez, importez, conservez, exportez ou partagez.
-          </p>
-        </section>
-
-        <section id="storage" class="policy-section">
-          <h2 data-i18n="s3Title">3. Stockage local et fichiers temporaires</h2>
-          <p data-i18n="s3P1">
-            Les documents créés ou importés dans Scaneris sont stockés localement dans l’espace de données de l’application sur votre appareil. Cela peut inclure les images des pages, le catalogue local des documents, les dossiers, les favoris, les réglages de scan et la signature visuelle.
-          </p>
-          <p data-i18n="s3P2">
-            Certains traitements, comme l’export PDF, la compression, la fusion, la division, la protection par mot de passe, le filigrane ou la génération de PDF pour carte d’identité et passeport, peuvent créer des fichiers temporaires. Ces fichiers peuvent rester temporairement sur l’appareil jusqu’à leur suppression par le système, par l’application ou par l’utilisateur selon le fonctionnement de l’appareil.
-          </p>
-          <p data-i18n="s3P3">
-            Scaneris ne synchronise pas automatiquement vos documents avec Google Drive, iCloud, un serveur Scaneris ou un autre service cloud.
-          </p>
-
-          <div class="mini-grid">
-            <div class="mini-card">
-              <strong data-i18n="s3Mini1Title">Documents</strong>
-              <p data-i18n="s3Mini1Text">Pages, images, titres, dates, favoris et dossiers sont conservés localement.</p>
-            </div>
-            <div class="mini-card">
-              <strong data-i18n="s3Mini2Title">Exports</strong>
-              <p data-i18n="s3Mini2Text">Les PDF exportés ou partagés peuvent être créés dans un espace temporaire local.</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="features" class="policy-section">
-          <h2 data-i18n="s4Title">4. Fonctionnalités principales</h2>
-
-          <h3 data-i18n="s4H1">Scanner et importer</h3>
-          <p data-i18n="s4P1">
-            La caméra peut être utilisée pour scanner un document, capturer une page, scanner un QR code, ou créer des documents à partir d’images. L’import de fichiers ou d’images utilise les sélecteurs système de votre appareil.
-          </p>
-
-          <h3 data-i18n="s4H2">OCR / extraction de texte</h3>
-          <p data-i18n="s4P2">
-            Scaneris propose une extraction de texte par OCR conçue pour fonctionner localement sur l’appareil. Les résultats OCR peuvent contenir des erreurs et doivent être vérifiés par l’utilisateur avant toute utilisation importante.
-          </p>
-
-          <h3 data-i18n="s4H3">Carte d’identité et passeport</h3>
-          <p data-i18n="s4P3">
-            Scaneris peut vous aider à créer un PDF local à partir d’images de carte d’identité ou de passeport. Ces fonctions ne réalisent pas de vérification officielle, de KYC, d’authentification légale ou de certification d’identité.
-          </p>
-
-          <h3 data-i18n="s4H4">Signature</h3>
-          <p data-i18n="s4P4">
-            La signature dans Scaneris est une annotation visuelle locale. Elle n’est pas une signature électronique qualifiée, ne vérifie pas l’identité du signataire et ne garantit pas une valeur juridique.
-          </p>
-
-          <h3 data-i18n="s4H5">Protection PDF</h3>
-          <p data-i18n="s4P5">
-            Scaneris peut créer un PDF protégé par mot de passe. Cette protection vise à limiter l’accès au fichier, mais aucun mécanisme numérique ne peut garantir une sécurité absolue dans toutes les situations.
-          </p>
-
-          <h3 data-i18n="s4H6">QR code</h3>
-          <p data-i18n="s4P6">
-            Scaneris peut créer et lire des QR codes. Si un QR code contient un lien, l’ouverture du lien se fait via une application externe ou un navigateur. Vous devez vérifier la destination avant d’ouvrir un lien inconnu.
-          </p>
-        </section>
-
-        <section id="permissions" class="policy-section">
-          <h2 data-i18n="s5Title">5. Permissions utilisées</h2>
-          <p data-i18n="s5P1">
-            Scaneris demande certaines permissions uniquement lorsqu’elles sont nécessaires au fonctionnement d’une fonctionnalité. Ces permissions sont importantes pour permettre à l’application de scanner, importer, générer, organiser et partager vos documents correctement.
-          </p>
-          <ul>
-            <li data-i18n="s5Li1">Caméra : nécessaire pour scanner des documents, capturer des pages, scanner une carte d’identité ou un passeport, et lire des QR codes. Sans cette permission, les fonctions de scan et de lecture QR ne peuvent pas fonctionner.</li>
-            <li data-i18n="s5Li2">Photos / images : nécessaire pour importer des images depuis votre appareil et les transformer en documents ou PDF. Sans cette permission, l’import depuis la galerie peut être limité ou indisponible.</li>
-            <li data-i18n="s5Li3">Fichiers : nécessaire pour importer des PDF, sélectionner des documents, exporter des fichiers ou utiliser les options système de partage. Sans cette permission ou accès système, certaines fonctions PDF peuvent être limitées.</li>
-            <li data-i18n="s5Li4">Stockage local : nécessaire pour conserver vos documents, préférences, signatures et fichiers générés dans l’espace local de l’application. Sans stockage local, Scaneris ne peut pas organiser durablement vos documents.</li>
-          </ul>
-          <p data-i18n="s5P2">
-            Vous pouvez refuser ou retirer certaines permissions depuis les réglages de votre appareil. Dans ce cas, les fonctionnalités associées peuvent ne plus fonctionner correctement. Les permissions peuvent varier selon Android, iOS, la version du système et les modules utilisés.
-          </p>
-        </section>
-
-        <section id="sharing" class="policy-section">
-          <h2 data-i18n="s6Title">6. Partage, export et services tiers</h2>
-          <p data-i18n="s6P1">
-            Lorsque vous utilisez une action de partage, d’export ou d’ouverture de lien, vous choisissez l’application ou le service destinataire via les options système. Il peut s’agir par exemple d’une application de messagerie, d’un gestionnaire de fichiers, d’un service cloud installé sur votre appareil ou d’un navigateur.
-          </p>
-          <p data-i18n="s6P2">
-            Scaneris ne contrôle pas les pratiques de confidentialité des applications tierces qui reçoivent vos fichiers, textes, images, PDF ou liens. Nous vous recommandons de vérifier les paramètres et politiques de confidentialité des services vers lesquels vous partagez vos documents.
-          </p>
-          <p data-i18n="s6P3">
-            Scaneris ne propose pas de synchronisation automatique avec Google Drive, iCloud ou un autre cloud. Vous pouvez toutefois choisir manuellement de partager ou d’enregistrer un fichier vers ces services si leurs applications sont disponibles sur votre appareil.
-          </p>
-        </section>
-
-        <section id="security" class="policy-section">
-          <h2 data-i18n="s7Title">7. Sécurité, conservation et suppression</h2>
-          <p data-i18n="s7P1">
-            Scaneris privilégie le traitement local et limite les transmissions automatiques. Toutefois, la sécurité de vos documents dépend aussi de la sécurité de votre appareil, de son verrouillage, de ses sauvegardes, des applications installées et des services vers lesquels vous partagez vos fichiers.
-          </p>
-          <p data-i18n="s7P2">
-            Vous pouvez supprimer les documents enregistrés dans l’application lorsque les fonctions de suppression sont disponibles. La désinstallation de l’application peut également supprimer les données associées selon le comportement normal d’Android ou iOS.
-          </p>
-          <p data-i18n="s7P3">
-            Certains fichiers temporaires ou fichiers déjà exportés vers d’autres applications peuvent subsister en dehors de Scaneris. Dans ce cas, leur suppression dépend du système ou de l’application qui les conserve.
-          </p>
-          <div class="note">
-            <strong data-i18n="s7NoteTitle">Recommandation</strong>
-            <p data-i18n="s7NoteText">
-              Pour les documents sensibles, protégez votre appareil avec un code, une empreinte digitale ou un autre mécanisme de sécurité, et vérifiez toujours les applications vers lesquelles vous partagez vos fichiers.
-            </p>
-          </div>
-        </section>
-
-        <section id="thirdparty" class="policy-section">
-          <h2 data-i18n="s8Title">8. Dépendances techniques et bibliothèques</h2>
-          <p data-i18n="s8P1">
-            Scaneris utilise des bibliothèques techniques nécessaires à certaines fonctions, comme la caméra, le scan, l’import de fichiers, l’OCR, la génération PDF, le traitement d’image, les QR codes, l’ouverture de liens, la protection PDF ou le partage système.
-          </p>
-          <p data-i18n="s8P2">
-            Ces bibliothèques servent à faire fonctionner les fonctionnalités de l’application. Les licences open source applicables peuvent être consultées dans l’application lorsque l’écran de licences est disponible, ou via les informations de distribution des bibliothèques concernées.
-          </p>
-          <p data-i18n="s8P3">
-            Dans le code audité, Scaneris ne contient pas de système de publicité, d’analytics, de compte utilisateur, de Firebase, de synchronisation Drive ou de backend cloud propriétaire. Si ces éléments sont ajoutés dans une version future, cette politique sera mise à jour.
-          </p>
-        </section>
-
-        <section class="policy-section">
-          <h2 data-i18n="s9Title">9. Absence de certaines fonctionnalités</h2>
-          <p data-i18n="s9P1">
-            Dans cette version, Scaneris ne fournit pas de compte utilisateur, de profil cloud, de synchronisation automatique, de vérification officielle d’identité, de certification de document, de KYC, de signature électronique qualifiée ou de conseil juridique.
-          </p>
-          <p data-i18n="s9P2">
-            Scaneris est un outil pratique de scan, d’organisation locale et de traitement documentaire. L’utilisateur reste responsable de la conformité, de l’exactitude et de l’usage des documents produits ou partagés.
-          </p>
-        </section>
-
-        <section class="policy-section">
-          <h2 data-i18n="s10Title">10. Modifications de cette politique</h2>
-          <p data-i18n="s10P1">
-            Cette politique peut être mise à jour pour refléter l’évolution de Scaneris, l’ajout de nouvelles fonctionnalités, des changements de dépendances techniques ou des exigences d’Android, iOS, Google Play ou Apple App Store.
-          </p>
-          <p class="legal-muted" data-i18n="s10P2">
-            Dernière mise à jour : 1 mai 2026.
-          </p>
-        </section>
-
-        <section id="contact" class="policy-section">
-          <div class="contact-card">
-            <h2 data-i18n="contactTitle">Contact</h2>
-            <p data-i18n="contactText">
-              Pour toute question concernant cette politique de confidentialité ou l’utilisation de Scaneris, vous pouvez contacter le support.
-            </p>
-            <p>
-              <a href="mailto:support@elmariniapp.com">support@elmariniapp.com</a>
-            </p>
-          </div>
-        </section>
-      </article>
-    </div>
 
     <footer class="footer">
       <p data-i18n="footerText">© 2026 Scaneris. Tous droits réservés.</p>
@@ -908,218 +595,70 @@
   <script>
     const translations = {
       fr: {
-        eyebrow: "Local-first • Documents • PDF • OCR",
-        heroTitle: "Politique de confidentialité",
-        heroSubtitle: "Scaneris est conçu pour scanner, organiser, transformer et partager vos documents avec une approche locale : pas de compte obligatoire, pas de synchronisation cloud automatique et aucun suivi publicitaire intégré dans l’application.",
-        pillLocal: "Traitement local",
-        pillNoAccount: "Aucun compte requis",
-        pillNoCloud: "Pas de cloud automatique",
-        pillUpdated: "Mise à jour : 1 mai 2026",
+        eyebrow: "Centre légal Scaneris",
+        heroTitle: "Documents légaux et support",
+        heroSubtitle: "Retrouvez les informations officielles de Scaneris : confidentialité, conditions d’utilisation, support et licences open source.",
+        badgeLocal: "Application local-first",
+        badgeNoAccount: "Aucun compte requis",
+        badgeNoCloud: "Pas de cloud automatique",
 
-        summary1Title: "Vos documents restent sur l’appareil",
-        summary1Text: "Les scans, images, PDF, dossiers et préférences sont principalement stockés localement.",
-        summary2Title: "Partage contrôlé par l’utilisateur",
-        summary2Text: "Les fichiers quittent Scaneris uniquement lorsque vous utilisez une action de partage ou d’export.",
-        summary3Title: "OCR et outils PDF locaux",
-        summary3Text: "L’extraction de texte et les traitements PDF sont conçus pour fonctionner sur l’appareil.",
-        summary4Title: "Pas de promesse juridique",
-        summary4Text: "Scaneris ne fournit pas de vérification officielle d’identité, de KYC ou de certification légale.",
+        privacyTitle: "Politique de confidentialité",
+        privacyText: "Données traitées, permissions, stockage local, OCR, partage, sécurité et documents sensibles.",
 
-        tocTitle: "Sommaire",
-        tocOverview: "Vue d’ensemble",
-        tocData: "Données traitées",
-        tocStorage: "Stockage local",
-        tocFeatures: "Fonctionnalités",
-        tocPermissions: "Permissions",
-        tocSharing: "Partage & apps tierces",
-        tocSecurity: "Sécurité & suppression",
-        tocThirdParty: "Dépendances techniques",
-        tocContact: "Contact",
+        termsTitle: "Conditions d’utilisation",
+        termsText: "Règles d’usage de Scaneris, limites de responsabilité, documents sensibles et fonctionnalités PDF.",
 
-        s1Title: "1. Vue d’ensemble",
-        s1P1: "Scaneris est une application de scan de documents, d’organisation locale et d’outils PDF. Elle permet notamment de scanner des documents, importer des images ou PDF, générer des PDF, extraire du texte par OCR, créer ou lire des QR codes, ajouter un filigrane, protéger un PDF par mot de passe, diviser ou fusionner des PDF et apposer une signature visuelle.",
-        s1P2: "L’application est conçue avec une approche local-first : les documents sont traités principalement sur votre appareil. Scaneris ne nécessite pas de compte utilisateur, ne propose pas de synchronisation cloud automatique et ne contient pas de système publicitaire ou d’analytics intégré dans le code audité.",
-        s1NoteTitle: "Point important",
-        s1NoteText: "Lorsque vous partagez ou exportez un document vers une autre application, le fichier est transmis à l’application ou au service que vous choisissez. À partir de ce moment, le traitement dépend de ce service tiers.",
+        supportTitle: "Support",
+        supportText: "Aide, contact, questions fréquentes et informations pour signaler un problème.",
 
-        s2Title: "2. Données pouvant être traitées",
-        s2P1: "Selon les fonctionnalités que vous utilisez, Scaneris peut traiter les catégories de données suivantes :",
-        s2Li1: "photos ou scans de documents capturés avec la caméra ;",
-        s2Li2: "images importées depuis votre appareil ;",
-        s2Li3: "fichiers PDF importés, générés, fusionnés, divisés, compressés, protégés ou filigranés ;",
-        s2Li4: "texte extrait localement par OCR ;",
-        s2Li5: "contenu de QR codes créés ou scannés ;",
-        s2Li6: "signature visuelle dessinée dans l’application, stockée sous forme de points normalisés ;",
-        s2Li7: "métadonnées locales comme les titres de documents, dates, favoris, dossiers et nombre de pages ;",
-        s2Li8: "préférences locales, comme les réglages de scan, grille, flash, son ou scan automatique.",
-        s2P2: "Scaneris peut être utilisé avec des documents personnels ou sensibles. Vous restez responsable des documents que vous scannez, importez, conservez, exportez ou partagez.",
+        licensesTitle: "Licences open source",
+        licensesText: "Informations sur les bibliothèques techniques, dépendances et notices open source.",
 
-        s3Title: "3. Stockage local et fichiers temporaires",
-        s3P1: "Les documents créés ou importés dans Scaneris sont stockés localement dans l’espace de données de l’application sur votre appareil. Cela peut inclure les images des pages, le catalogue local des documents, les dossiers, les favoris, les réglages de scan et la signature visuelle.",
-        s3P2: "Certains traitements, comme l’export PDF, la compression, la fusion, la division, la protection par mot de passe, le filigrane ou la génération de PDF pour carte d’identité et passeport, peuvent créer des fichiers temporaires. Ces fichiers peuvent rester temporairement sur l’appareil jusqu’à leur suppression par le système, par l’application ou par l’utilisateur selon le fonctionnement de l’appareil.",
-        s3P3: "Scaneris ne synchronise pas automatiquement vos documents avec Google Drive, iCloud, un serveur Scaneris ou un autre service cloud.",
-        s3Mini1Title: "Documents",
-        s3Mini1Text: "Pages, images, titres, dates, favoris et dossiers sont conservés localement.",
-        s3Mini2Title: "Exports",
-        s3Mini2Text: "Les PDF exportés ou partagés peuvent être créés dans un espace temporaire local.",
+        openPage: "Ouvrir la page →",
+        openPage2: "Ouvrir la page →",
+        openPage3: "Ouvrir la page →",
+        openPage4: "Ouvrir la page →",
 
-        s4Title: "4. Fonctionnalités principales",
-        s4H1: "Scanner et importer",
-        s4P1: "La caméra peut être utilisée pour scanner un document, capturer une page, scanner un QR code, ou créer des documents à partir d’images. L’import de fichiers ou d’images utilise les sélecteurs système de votre appareil.",
-        s4H2: "OCR / extraction de texte",
-        s4P2: "Scaneris propose une extraction de texte par OCR conçue pour fonctionner localement sur l’appareil. Les résultats OCR peuvent contenir des erreurs et doivent être vérifiés par l’utilisateur avant toute utilisation importante.",
-        s4H3: "Carte d’identité et passeport",
-        s4P3: "Scaneris peut vous aider à créer un PDF local à partir d’images de carte d’identité ou de passeport. Ces fonctions ne réalisent pas de vérification officielle, de KYC, d’authentification légale ou de certification d’identité.",
-        s4H4: "Signature",
-        s4P4: "La signature dans Scaneris est une annotation visuelle locale. Elle n’est pas une signature électronique qualifiée, ne vérifie pas l’identité du signataire et ne garantit pas une valeur juridique.",
-        s4H5: "Protection PDF",
-        s4P5: "Scaneris peut créer un PDF protégé par mot de passe. Cette protection vise à limiter l’accès au fichier, mais aucun mécanisme numérique ne peut garantir une sécurité absolue dans toutes les situations.",
-        s4H6: "QR code",
-        s4P6: "Scaneris peut créer et lire des QR codes. Si un QR code contient un lien, l’ouverture du lien se fait via une application externe ou un navigateur. Vous devez vérifier la destination avant d’ouvrir un lien inconnu.",
-
-        s5Title: "5. Permissions utilisées",
-        s5P1: "Scaneris demande certaines permissions uniquement lorsqu’elles sont nécessaires au fonctionnement d’une fonctionnalité. Ces permissions sont importantes pour permettre à l’application de scanner, importer, générer, organiser et partager vos documents correctement.",
-        s5Li1: "Caméra : nécessaire pour scanner des documents, capturer des pages, scanner une carte d’identité ou un passeport, et lire des QR codes. Sans cette permission, les fonctions de scan et de lecture QR ne peuvent pas fonctionner.",
-        s5Li2: "Photos / images : nécessaire pour importer des images depuis votre appareil et les transformer en documents ou PDF. Sans cette permission, l’import depuis la galerie peut être limité ou indisponible.",
-        s5Li3: "Fichiers : nécessaire pour importer des PDF, sélectionner des documents, exporter des fichiers ou utiliser les options système de partage. Sans cette permission ou accès système, certaines fonctions PDF peuvent être limitées.",
-        s5Li4: "Stockage local : nécessaire pour conserver vos documents, préférences, signatures et fichiers générés dans l’espace local de l’application. Sans stockage local, Scaneris ne peut pas organiser durablement vos documents.",
-        s5P2: "Vous pouvez refuser ou retirer certaines permissions depuis les réglages de votre appareil. Dans ce cas, les fonctionnalités associées peuvent ne plus fonctionner correctement. Les permissions peuvent varier selon Android, iOS, la version du système et les modules utilisés.",
-
-        s6Title: "6. Partage, export et services tiers",
-        s6P1: "Lorsque vous utilisez une action de partage, d’export ou d’ouverture de lien, vous choisissez l’application ou le service destinataire via les options système. Il peut s’agir par exemple d’une application de messagerie, d’un gestionnaire de fichiers, d’un service cloud installé sur votre appareil ou d’un navigateur.",
-        s6P2: "Scaneris ne contrôle pas les pratiques de confidentialité des applications tierces qui reçoivent vos fichiers, textes, images, PDF ou liens. Nous vous recommandons de vérifier les paramètres et politiques de confidentialité des services vers lesquels vous partagez vos documents.",
-        s6P3: "Scaneris ne propose pas de synchronisation automatique avec Google Drive, iCloud ou un autre cloud. Vous pouvez toutefois choisir manuellement de partager ou d’enregistrer un fichier vers ces services si leurs applications sont disponibles sur votre appareil.",
-
-        s7Title: "7. Sécurité, conservation et suppression",
-        s7P1: "Scaneris privilégie le traitement local et limite les transmissions automatiques. Toutefois, la sécurité de vos documents dépend aussi de la sécurité de votre appareil, de son verrouillage, de ses sauvegardes, des applications installées et des services vers lesquels vous partagez vos fichiers.",
-        s7P2: "Vous pouvez supprimer les documents enregistrés dans l’application lorsque les fonctions de suppression sont disponibles. La désinstallation de l’application peut également supprimer les données associées selon le comportement normal d’Android ou iOS.",
-        s7P3: "Certains fichiers temporaires ou fichiers déjà exportés vers d’autres applications peuvent subsister en dehors de Scaneris. Dans ce cas, leur suppression dépend du système ou de l’application qui les conserve.",
-        s7NoteTitle: "Recommandation",
-        s7NoteText: "Pour les documents sensibles, protégez votre appareil avec un code, une empreinte digitale ou un autre mécanisme de sécurité, et vérifiez toujours les applications vers lesquelles vous partagez vos fichiers.",
-
-        s8Title: "8. Dépendances techniques et bibliothèques",
-        s8P1: "Scaneris utilise des bibliothèques techniques nécessaires à certaines fonctions, comme la caméra, le scan, l’import de fichiers, l’OCR, la génération PDF, le traitement d’image, les QR codes, l’ouverture de liens, la protection PDF ou le partage système.",
-        s8P2: "Ces bibliothèques servent à faire fonctionner les fonctionnalités de l’application. Les licences open source applicables peuvent être consultées dans l’application lorsque l’écran de licences est disponible, ou via les informations de distribution des bibliothèques concernées.",
-        s8P3: "Dans le code audité, Scaneris ne contient pas de système de publicité, d’analytics, de compte utilisateur, de Firebase, de synchronisation Drive ou de backend cloud propriétaire. Si ces éléments sont ajoutés dans une version future, cette politique sera mise à jour.",
-
-        s9Title: "9. Absence de certaines fonctionnalités",
-        s9P1: "Dans cette version, Scaneris ne fournit pas de compte utilisateur, de profil cloud, de synchronisation automatique, de vérification officielle d’identité, de certification de document, de KYC, de signature électronique qualifiée ou de conseil juridique.",
-        s9P2: "Scaneris est un outil pratique de scan, d’organisation locale et de traitement documentaire. L’utilisateur reste responsable de la conformité, de l’exactitude et de l’usage des documents produits ou partagés.",
-
-        s10Title: "10. Modifications de cette politique",
-        s10P1: "Cette politique peut être mise à jour pour refléter l’évolution de Scaneris, l’ajout de nouvelles fonctionnalités, des changements de dépendances techniques ou des exigences d’Android, iOS, Google Play ou Apple App Store.",
-        s10P2: "Dernière mise à jour : 1 mai 2026.",
+        aboutTitle: "À propos de Scaneris",
+        aboutP1: "Scaneris est une application de scan de documents et d’outils PDF pensée pour fonctionner principalement sur l’appareil.",
+        aboutP2: "Elle permet de scanner, organiser, transformer et partager des documents sans compte obligatoire ni synchronisation cloud automatique.",
 
         contactTitle: "Contact",
-        contactText: "Pour toute question concernant cette politique de confidentialité ou l’utilisation de Scaneris, vous pouvez contacter le support.",
+        contactText: "Pour toute question concernant Scaneris ou ces documents, contactez le support.",
         footerText: "© 2026 Scaneris. Tous droits réservés."
       },
 
       en: {
-        eyebrow: "Local-first • Documents • PDF • OCR",
-        heroTitle: "Privacy Policy",
-        heroSubtitle: "Scaneris is designed to scan, organize, transform and share your documents with a local-first approach: no required account, no automatic cloud synchronization and no advertising tracking system integrated into the app.",
-        pillLocal: "Local processing",
-        pillNoAccount: "No account required",
-        pillNoCloud: "No automatic cloud",
-        pillUpdated: "Updated: May 1, 2026",
+        eyebrow: "Scaneris Legal Center",
+        heroTitle: "Legal documents and support",
+        heroSubtitle: "Find official Scaneris information: privacy policy, terms of use, support and open source licenses.",
+        badgeLocal: "Local-first app",
+        badgeNoAccount: "No account required",
+        badgeNoCloud: "No automatic cloud",
 
-        summary1Title: "Your documents stay on your device",
-        summary1Text: "Scans, images, PDFs, folders and preferences are mainly stored locally.",
-        summary2Title: "Sharing is controlled by the user",
-        summary2Text: "Files leave Scaneris only when you use a sharing or export action.",
-        summary3Title: "Local OCR and PDF tools",
-        summary3Text: "Text extraction and PDF processing are designed to run on the device.",
-        summary4Title: "No legal certification promise",
-        summary4Text: "Scaneris does not provide official identity verification, KYC or legal certification.",
+        privacyTitle: "Privacy Policy",
+        privacyText: "Processed data, permissions, local storage, OCR, sharing, security and sensitive documents.",
 
-        tocTitle: "Contents",
-        tocOverview: "Overview",
-        tocData: "Processed data",
-        tocStorage: "Local storage",
-        tocFeatures: "Features",
-        tocPermissions: "Permissions",
-        tocSharing: "Sharing & third-party apps",
-        tocSecurity: "Security & deletion",
-        tocThirdParty: "Technical dependencies",
-        tocContact: "Contact",
+        termsTitle: "Terms of Use",
+        termsText: "Rules for using Scaneris, liability limits, sensitive documents and PDF features.",
 
-        s1Title: "1. Overview",
-        s1P1: "Scaneris is a document scanning, local organization and PDF tools app. It allows users to scan documents, import images or PDFs, generate PDFs, extract text through OCR, create or read QR codes, add watermarks, protect PDFs with a password, split or merge PDFs and apply a visual signature.",
-        s1P2: "The app is designed with a local-first approach: documents are mainly processed on your device. Scaneris does not require a user account, does not provide automatic cloud synchronization and does not include an advertising or analytics system in the audited code.",
-        s1NoteTitle: "Important note",
-        s1NoteText: "When you share or export a document to another app, the file is transferred to the app or service you choose. From that point, processing depends on that third-party service.",
+        supportTitle: "Support",
+        supportText: "Help, contact, frequently asked questions and information to report an issue.",
 
-        s2Title: "2. Data that may be processed",
-        s2P1: "Depending on the features you use, Scaneris may process the following categories of data:",
-        s2Li1: "photos or document scans captured with the camera;",
-        s2Li2: "images imported from your device;",
-        s2Li3: "PDF files imported, generated, merged, split, compressed, protected or watermarked;",
-        s2Li4: "text extracted locally through OCR;",
-        s2Li5: "content of QR codes created or scanned;",
-        s2Li6: "visual signature drawn in the app, stored as normalized points;",
-        s2Li7: "local metadata such as document titles, dates, favorites, folders and page count;",
-        s2Li8: "local preferences, such as scan settings, grid, flash, sound or automatic scan.",
-        s2P2: "Scaneris may be used with personal or sensitive documents. You remain responsible for the documents you scan, import, keep, export or share.",
+        licensesTitle: "Open Source Licenses",
+        licensesText: "Information about technical libraries, dependencies and open source notices.",
 
-        s3Title: "3. Local storage and temporary files",
-        s3P1: "Documents created or imported in Scaneris are stored locally in the app’s data space on your device. This may include page images, the local document catalog, folders, favorites, scan settings and the visual signature.",
-        s3P2: "Some operations, such as PDF export, compression, merging, splitting, password protection, watermarking or PDF generation for ID cards and passports, may create temporary files. These files may remain temporarily on the device until they are removed by the system, the app or the user depending on the device behavior.",
-        s3P3: "Scaneris does not automatically sync your documents with Google Drive, iCloud, a Scaneris server or any other cloud service.",
-        s3Mini1Title: "Documents",
-        s3Mini1Text: "Pages, images, titles, dates, favorites and folders are kept locally.",
-        s3Mini2Title: "Exports",
-        s3Mini2Text: "Exported or shared PDFs may be created in a local temporary space.",
+        openPage: "Open page →",
+        openPage2: "Open page →",
+        openPage3: "Open page →",
+        openPage4: "Open page →",
 
-        s4Title: "4. Main features",
-        s4H1: "Scanning and importing",
-        s4P1: "The camera may be used to scan a document, capture a page, scan a QR code or create documents from images. File or image imports use your device’s system pickers.",
-        s4H2: "OCR / text extraction",
-        s4P2: "Scaneris provides OCR text extraction designed to run locally on the device. OCR results may contain errors and should be reviewed by the user before any important use.",
-        s4H3: "ID card and passport",
-        s4P3: "Scaneris can help you create a local PDF from ID card or passport images. These features do not perform official verification, KYC, legal authentication or identity certification.",
-        s4H4: "Signature",
-        s4P4: "The signature in Scaneris is a local visual annotation. It is not a qualified electronic signature, does not verify the signer’s identity and does not guarantee legal value.",
-        s4H5: "PDF protection",
-        s4P5: "Scaneris can create a password-protected PDF. This protection aims to restrict access to the file, but no digital mechanism can guarantee absolute security in all situations.",
-        s4H6: "QR code",
-        s4P6: "Scaneris can create and read QR codes. If a QR code contains a link, opening the link is done through an external app or browser. You should verify the destination before opening an unknown link.",
-
-        s5Title: "5. Permissions used",
-        s5P1: "Scaneris requests certain permissions only when they are necessary for a feature to work. These permissions are important to allow the app to scan, import, generate, organize and share your documents properly.",
-        s5Li1: "Camera: required to scan documents, capture pages, scan an ID card or passport, and read QR codes. Without this permission, scanning and QR reading features cannot work.",
-        s5Li2: "Photos / images: required to import images from your device and turn them into documents or PDFs. Without this permission, importing from the gallery may be limited or unavailable.",
-        s5Li3: "Files: required to import PDFs, select documents, export files or use system sharing options. Without this permission or system access, some PDF features may be limited.",
-        s5Li4: "Local storage: required to keep your documents, preferences, signatures and generated files in the app’s local space. Without local storage, Scaneris cannot reliably organize your documents.",
-        s5P2: "You can refuse or remove certain permissions from your device settings. In that case, the related features may no longer work properly. Permissions may vary depending on Android, iOS, the operating system version and the modules used.",
-
-        s6Title: "6. Sharing, export and third-party services",
-        s6P1: "When you use a sharing, export or link-opening action, you choose the receiving app or service through the system options. This may include a messaging app, file manager, cloud service installed on your device or browser.",
-        s6P2: "Scaneris does not control the privacy practices of third-party apps that receive your files, text, images, PDFs or links. We recommend checking the privacy settings and policies of the services you share your documents with.",
-        s6P3: "Scaneris does not provide automatic synchronization with Google Drive, iCloud or any other cloud. However, you may manually choose to share or save a file to these services if their apps are available on your device.",
-
-        s7Title: "7. Security, retention and deletion",
-        s7P1: "Scaneris prioritizes local processing and limits automatic transmissions. However, the security of your documents also depends on your device security, lock settings, backups, installed apps and the services you share files with.",
-        s7P2: "You can delete documents saved in the app when deletion features are available. Uninstalling the app may also remove associated data according to the normal behavior of Android or iOS.",
-        s7P3: "Some temporary files or files already exported to other apps may remain outside Scaneris. In that case, their deletion depends on the system or the app that keeps them.",
-        s7NoteTitle: "Recommendation",
-        s7NoteText: "For sensitive documents, protect your device with a passcode, fingerprint or another security mechanism, and always check the apps you share your files with.",
-
-        s8Title: "8. Technical dependencies and libraries",
-        s8P1: "Scaneris uses technical libraries required for certain features, such as camera access, scanning, file import, OCR, PDF generation, image processing, QR codes, link opening, PDF protection or system sharing.",
-        s8P2: "These libraries are used to make the app’s features work. Applicable open source licenses may be viewed in the app when the license screen is available, or through the distribution information of the relevant libraries.",
-        s8P3: "In the audited code, Scaneris does not include advertising, analytics, user accounts, Firebase, Drive synchronization or a proprietary cloud backend. If these elements are added in a future version, this policy will be updated.",
-
-        s9Title: "9. Absence of certain features",
-        s9P1: "In this version, Scaneris does not provide a user account, cloud profile, automatic synchronization, official identity verification, document certification, KYC, qualified electronic signature or legal advice.",
-        s9P2: "Scaneris is a practical tool for scanning, local organization and document processing. The user remains responsible for the compliance, accuracy and use of documents produced or shared.",
-
-        s10Title: "10. Changes to this policy",
-        s10P1: "This policy may be updated to reflect changes to Scaneris, new features, technical dependency changes or Android, iOS, Google Play or Apple App Store requirements.",
-        s10P2: "Last updated: May 1, 2026.",
+        aboutTitle: "About Scaneris",
+        aboutP1: "Scaneris is a document scanning and PDF tools app designed to run mainly on the device.",
+        aboutP2: "It helps scan, organize, transform and share documents without a required account or automatic cloud synchronization.",
 
         contactTitle: "Contact",
-        contactText: "For any question about this privacy policy or the use of Scaneris, you can contact support.",
+        contactText: "For any question about Scaneris or these documents, contact support.",
         footerText: "© 2026 Scaneris. All rights reserved."
       }
     };
@@ -1139,7 +678,7 @@
       document.getElementById("btn-en").classList.toggle("active", selected === "en");
 
       try {
-        localStorage.setItem("scaneris_privacy_lang", selected);
+        localStorage.setItem("scaneris_legal_lang", selected);
       } catch (_) {}
     }
 
@@ -1147,7 +686,7 @@
       let saved = null;
 
       try {
-        saved = localStorage.getItem("scaneris_privacy_lang");
+        saved = localStorage.getItem("scaneris_legal_lang");
       } catch (_) {}
 
       const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("en")
